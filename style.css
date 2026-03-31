@@ -1,5 +1,162 @@
-q* {
-  padding: 0px;
-  margin: 0px;
-  background-color: #2ac95f;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header h1 {
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00ffcc;
+}
+
+section {
+  padding: 100px 40px;
+}
+
+#home {
+  height: 100vh;
+  text-align: center;
+}
+
+#home img {
+  margin-top: 20px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+.car-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+#cars .car-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    min-width: 300px;
+}
+
+#cars .car-card:hover {
+    transform: scale(1.03);
+}
+
+#cars img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#tech, #sustain, #about {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+
+form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #00ffcc;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #00ccaa;
+}
+
+.footer {
+  background-color: #0d0d0d;
+  color: #bfbfbf;
+  padding: 40px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.warning-title {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  section {
+    padding: 80px 20px;
+  }
 }
