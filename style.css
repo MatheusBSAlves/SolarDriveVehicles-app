@@ -1,8 +1,31 @@
-* {
+/* ------- variaveis para facilitar manutencao ---------- */
+:root {
+  --cor-creme: #fffff0; /* fundo principal */
+  --cor-verde-claro: #c5f3c5; /* destaque/acento */
+  --cor-verde-medio: #6ec96e; /* hover e bordas */
+  --cor-verde-escuro: #2d6a2d; /* textos sobre fundo claro */
+  --cor-terra: #4a3728; /* títulos e contrastes */
+  --cor-branco: #ffffff;
+  --cor-cinza-suave: #f0f0e0;
+
+  --fonte-titulo: "Playfair Display", Georgia, serif;
+  --fonte-corpo: "DM Sans", sans-serif;
+
+  --raio-borda: 12px;
+  --sombra-suave: 0 4px 24px rgba(45, 106, 45, 0.1);
+  --sombra-card: 0 8px 40px rgba(45, 106, 45, 0.14);
+
+  --transicao: 0.35s ease;
+}
+/* --------------- RESET E BASE -------------- */
+
+/* zera margens, paddings e aplica border-box pra todos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -10,55 +33,172 @@ html {
 }
 
 body {
-  margin: 0;
-  background: #0a0a0a;
-  color: #ffffff;
-  line-height: 1.6;
+  background-color: var(--cor-creme);
+  color: var(--cor-terra);
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* -------- classes reutilizaveis para estrutura e estilo geral de seções -----------  */
+
+/* container centralizado com largura máxima */
+.container {
+  width: 90%;
+  max-width: 1160px;
+  margin-inline: auto;
+}
+
+/* tag de destaque (badge) usada como rotulo de secao */
+.badge {
+  display: inline-block;
+  background: var(--cor-verde-claro);
+  color: var(--cor-verde-escuro);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+/* titulo principal de seção - tamanho fluido com 'clamp()' */
+/* clamp() -> {min/max de tamanho de uma 'div' por exemplo}  */
+.titulo-secao {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--cor-terra);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+/* texto complementar mais suave */
+.subtitulo-secao {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #6b5a4e;
+  max-width: 560px;
+}
+
+/* -------------- header e navegação -------------- */
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
-  padding: 15px 40px;
+  z-index: 100;
+  background: rgba(255, 255, 240, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #dff0df;
+}
 
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-
+/* barra interna header — flexbox -logo + nav */
+.header-interior {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  z-index: 1000;
+  justify-content: space-between;
+  padding-block: 1rem;
 }
 
-header h1 {
-  letter-spacing: 3px;
+/* logo texto */
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  color: var(--cor-verde-escuro);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--cor-verde-claro);
+  padding: 0rem 1rem 0.1rem 0.4rem;
+  border-radius: 50px;
 }
 
+/* sol logo */
+.logo-sol {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  animation: pulsaSol 3s ease-in-out infinite;
+}
+
+/* lista - links da nav principal */
+nav ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* links individuais de nav */
 nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin-left: 20px;
-  transition: 0.3s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cor-terra);
+  transition: color var(--transicao);
+  position: relative;
 }
 
+/* sublinhado animado que aparece no hover*/ /* ( "TREM CHATO DE FAZE" ) */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cor-verde-medio);
+  border-radius: 2px;
+  transition: width var(--transicao);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 nav a:hover {
-  color: #00ffcc;
+  color: var(--cor-verde-escuro);
+}
+
+/* botao CTA destacado na barra de navegação */
+.btn-nav {
+  background: var(--cor-verde-claro);
+  color: var(--cor-verde-escuro) !important;
+  padding: 0.45rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  transition:
+    background var(--transicao),
+    transform var(--transicao);
+}
+
+.btn-nav:hover {
+  background: var(--cor-verde-medio);
+  transform: scale(1.04);
 }
 
 section {
   padding: 100px 40px;
 }
 
-#home {
-  height: 100vh;
-  text-align: center;
-}
-
 .hero {
   height: 100vh;
-  background: url("https://i.pinimg.com/1200x/9b/fd/86/9bfd86de09a44b25f8edf471fe4362a7.jpg") no-repeat center/cover;
+  background: url("https://i.pinimg.com/1200x/9b/fd/86/9bfd86de09a44b25f8edf471fe4362a7.jpg")
+    no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,10 +265,15 @@ h3 {
   padding: 20px;
 }
 
+#home {
+  height: 100vh;
+  text-align: center;
+}
+
 #cars .car-card {
   background: linear-gradient(145deg, #111, #1a1a1a);
   color: #ffffff;
-  box-shadow: 0 0 20px rgba(0,255,204,0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
   padding: 20px;
   border-radius: 15px;
   transition: 0.3s;
@@ -137,18 +282,13 @@ h3 {
 
 #cars .car-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0,255,204,0.3);
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
 }
 
 #cars img {
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
-}
-
-ul {
-  margin-top: 10px;
-  margin-left: 20px;
 }
 
 #tech,
@@ -189,18 +329,78 @@ button:hover {
   background: #00ccaa;
 }
 
-.footer {
-  background-color: #0d0d0d;
-  color: #bfbfbf;
-  padding: 40px 20px;
-  font-size: 14px;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 40px;
+/* -------------- footer -------------- */
+
+footer {
+  color: var(--cor-creme);
+  padding-block: 4rem 2rem;
 }
 
-.footer p {
-  margin: 10px 0;
+/* grid de quatro colunas: descrição + tres colunas de links */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 240, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* logo no footer */
+.footer-logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  color: var(--cor-creme);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-descricao {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.footer-col h4 {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  color: var(--cor-creme);
+  margin-bottom: 1rem;
+}
+
+/* lista vertical de links (por coluna) */
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* links individuais do footer */
+.footer-col a {
+  font-size: 0.875rem;
+  font-weight: 300;
+  transition: color var(--transicao);
+}
+
+.footer-col a:hover {
+  color: var(--cor-verde-claro);
+}
+
+/* barra de copyright — linha inferior do footer */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-bottom a {
+  color: var(--cor-verde-claro);
 }
 
 .warning-title {
@@ -208,6 +408,8 @@ button:hover {
   font-weight: bold;
   color: #ffffff;
 }
+
+/* -------------- animacoes -------------- */
 
 @media (max-width: 768px) {
   header {

@@ -5,29 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SolarDrive Vehicles</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
-    <header>
-      <h1>SolarDriver Vehicles</h1>
-      <nav>
-        <a href="#home">Início</a>
-        <a href="#cars">Modelos</a>
-        <a href="#tech">Tecnologia</a>
-        <a href="#sustain">Sustentabilidade</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
+  <header>
+    <div class="container header-interior">
+
+      <!-- logo S.D.V. -->
+      <a href="#inicio" class="logo">
+        <span class="logo-sol" aria-hidden="true">☀</span>
+        SolarDrive      </a>
+
+      <!-- nave principal (sujeito a alterações) -->
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#produtos">Veículos</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato" class="btn-nav">Conheça mais</a></li>
+        </ul>
       </nav>
-      <br />
-    </header>
+
+    </div>
+  </header>
 
     <section id="home">
-    <div class="hero">
-      <h2>Mobilidade movida pelo Sol</h2>
-      <p>Carros inteligentes, sustentáveis e independentes de combustível</p>
-      <a href="#cars" class="btn">Ver Modelos</a>
-    </div>
-  </section>
+      <div class="hero">
+        <h2>Mobilidade movida pelo Sol</h2>
+        <p>Carros inteligentes, sustentáveis e independentes de combustível</p>
+        <a href="#cars" class="btn">Ver Modelos</a>
+      </div>
+    </section>
 
     <section id="cars">
       <br />
@@ -80,7 +94,6 @@
         </div>
       </div>
     </section>
-
 
     <section id="tech">
       <h2>Tecnologia</h2>
@@ -174,37 +187,68 @@
       <br />
     </section>
 
-    <footer class="footer">
-      <p>
-        Este site é protegido por reCAPTCHA e a Política de Privacidade e os
-        Termos de Serviço do Google se aplicam.
-      </p>
+    <footer>
+      <div class="container">
+        <!-- Grade do rodapé com logo + colunas de links -->
+        <div class="footer-grid">
+          <!-- coluna institucional -->
+          <div>
+            <p class="footer-logo">
+              <span aria-hidden="true">☀</span> SolarDrive Vehicles
+            </p>
+            <p class="footer-descricao">
+              Fabricante brasileira de veículos movidos exclusivamente a energia
+              solar. Nossa missão é democratizar a mobilidade sustentável nas
+              cidades.
+            </p>
+          </div>
 
-      <p>© 2026 SolarDrive Vehicles. Todos os direitos reservados.</p>
+          <!-- nav: Empresa -->
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul>
+              <li><a href="#sobre">Sobre nós</a></li>
+              <li><a href="#beneficios">Missão</a></li>
+              <li><a href="#depoimentos">Depoimentos</a></li>
+              <li><a href="#">Imprensa</a></li>
+            </ul>
+          </div>
 
-      <p>
-        SolarDrive Vehicles é uma empresa fictícia criada para fins acadêmicos.
-        Qualquer semelhança com empresas, produtos ou serviços reais é mera
-        coincidência.
-      </p>
+          <!-- nav: Produtos -->
+          <div class="footer-col">
+            <h4>Produtos</h4>
+            <ul>
+              <li><a href="#produtos">SolarDrive City</a></li>
+              <li><a href="#produtos">SolarDrive Glide</a></li>
+              <li><a href="#">Acessórios</a></li>
+              <li><a href="#">Financiamento</a></li>
+            </ul>
+          </div>
 
-      <p>
-        A SolarDrive Vehicles fabrica carros compactos e scooters movidos
-        exclusivamente a energia solar. Projetados para ambientes urbanos,
-        nossos veículos oferecem uma alternativa limpa, acessível e estilosa
-        para o deslocamento cotidiano, contribuindo para um futuro mais
-        sustentável.
-      </p>
+          <!-- nav: suporte -->
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <ul>
+              <li><a href="#">Central de ajuda</a></li>
+              <li><a href="#">Garantia</a></li>
+              <li><a href="#">Assistência técnica</a></li>
+              <li><a href="mailto:contato@solardrive.com.br">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- /footer-grid -->
 
-      <p class="warning-title">AVISO SOBRE OFERTAS NÃO AUTORIZADAS</p>
-
-      <p>
-        A SolarDrive Vehicles não autoriza a venda de ações, franquias ou
-        oportunidades de investimento por terceiros. Qualquer oferta desse tipo
-        não é legítima e deve ser tratada com cautela.
-      </p>
-
-      <p class="logo">SolarDrive</p>
+        <!-- barra de copyright -->
+        <div class="footer-bottom">
+          <small
+            >© 2025 SolarDrive Vehicles. Todos os direitos reservados.</small
+          >
+          <small>
+            Feito com ☀️ e
+            <a href="#inicio">energia renovável</a>
+          </small>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
