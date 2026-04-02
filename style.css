@@ -123,7 +123,6 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
 }
 
 /* sol logo */
@@ -331,7 +330,8 @@ button:hover {
 /* -------------- footer -------------- */
 
 footer {
-  color: var(--cor-creme);
+  background: var(--cor-terra);
+  color: rgba(255, 255, 240, 0.75);
   padding-block: 4rem 2rem;
 }
 
