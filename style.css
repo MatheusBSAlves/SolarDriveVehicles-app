@@ -15,7 +15,7 @@
   --sombra-suave: 0 4px 24px rgba(45, 106, 45, 0.1);
   --sombra-card: 0 8px 40px rgba(45, 106, 45, 0.14);
 
-  --transicao: 0.35s ease;
+  --transicao: 0.45s ease;
 }
 /* --------------- RESET E BASE -------------- */
 
@@ -55,7 +55,7 @@ ul {
   list-style: none;
 }
 
-/* -------- classes reutilizaveis para estrutura e estilo geral de seções -----------  */
+/* -------- classes reutilizaveis para estrutura e estilo de secoes gerais -----------  */
 
 /* container centralizado com largura máxima */
 .container {
@@ -123,9 +123,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--cor-verde-claro);
-  padding: 0rem 1rem 0.1rem 0.4rem;
-  border-radius: 50px;
+
 }
 
 /* sol logo */
@@ -135,7 +133,6 @@ header {
   display: grid;
   place-items: center;
   font-size: 1rem;
-  animation: pulsaSol 3s ease-in-out infinite;
 }
 
 /* lista - links da nav principal */
@@ -191,20 +188,19 @@ nav a:hover {
   transform: scale(1.04);
 }
 
-section {
-  padding: 100px 40px;
-}
+/* -------------- hero (banner principal) --------------  */
 
 .hero {
-  height: 100vh;
   background: url("https://i.pinimg.com/1200x/9b/fd/86/9bfd86de09a44b25f8edf471fe4362a7.jpg")
     no-repeat center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  text-align: center;
+  gap: 3rem;
+  padding-block: 5rem 3rem;
   position: relative;
+  overflow: hidden;
 }
 
 .hero * {
@@ -212,9 +208,12 @@ section {
   z-index: 1;
 }
 
-.hero h2 {
-  font-size: 48px;
-  text-shadow: 0 0 10px black;
+.hero-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.15;
+  color: var(--cor-terra);
+  margin-bottom: 1.5rem;
 }
 
 .hero p {
