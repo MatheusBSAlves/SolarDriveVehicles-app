@@ -96,6 +96,15 @@ ul {
   max-width: 560px;
 }
 
+/* separador decorativo (ideia nova) */
+.linha-verde {
+  width: 56px;
+  height: 3px;
+  background: var(--cor-verde-claro);
+  border-radius: 2px;
+  margin: 1.5rem;
+}
+
 /* -------------- header e navegação -------------- */
 
 header {
@@ -247,25 +256,11 @@ nav a:hover {
   background: #00ccaa;
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-h3 {
-  margin-top: 20px;
-}
-
 .car-container {
   display: flex;
   overflow-x: auto;
   gap: 20px;
   padding: 20px;
-}
-
-#home {
-  height: 100vh;
-  text-align: center;
 }
 
 #cars .car-card {
@@ -289,32 +284,6 @@ h3 {
   border-radius: 10px;
 }
 
-#tech,
-#sustain,
-#about {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-form {
-  max-width: 400px;
-  margin: auto;
-  text-align: left;
-}
-
-input,
-textarea {
-  background: #111;
-  color: white;
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 5px;
-}
-
 button {
   padding: 10px 20px;
   background: #00ffcc;
@@ -325,6 +294,112 @@ button {
 
 button:hover {
   background: #00ccaa;
+}
+
+/* ----------------- contato form ---------------- */
+
+.contato {
+  padding-block: 6rem;
+}
+
+.contato-interior {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contato-texto p{
+  font-weight: 300;
+  color: #6b5a4e;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.contato-info li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--cor-terra);
+}
+
+.contato-info a:hover {
+  color: var(--cor-verde-escuro);
+  text-decoration: underline;
+}
+
+.contato-icone {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.form-contato {
+  background: var(--cor-branco);
+  border: 1px solid #e8f5e8;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--sombra-card);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cor-terra);
+}
+
+/* asterisco obrigatorio */
+.obrigatorio {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #dce8dc;
+  border-radius: 10px;
+  font-family: var(--fonte-corpo);
+  font-size: 0.95rem;
+  color: var(--cor-terra);
+  background: var(--cor-creme);
+  transition: border-color var(--transicao), box-shadow var(--transicao);
+  outline: none;
+  appearance: none; /* remove estilo padrão do select */
+}
+
+.form-input:focus {
+  border-color: var(--cor-verde-medio);
+  box-shadow: 0 0 0 3px rgba(110, 201, 110, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
 }
 
 /* -------------- footer -------------- */

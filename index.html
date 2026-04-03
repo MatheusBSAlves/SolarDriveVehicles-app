@@ -34,8 +34,9 @@
         </nav>
       </div>
     </header>
+
     <section id="home" class="hero">
-      <div class="container hero-content">
+      <div class="container hero-container">
         <h2>Mobilidade movida pelo Sol</h2>
         <p>Carros inteligentes, sustentáveis e independentes de combustível</p>
         <a href="#cars" class="btn">Ver Modelos</a>
@@ -160,30 +161,59 @@
       <br />
     </section>
 
-    <section id="contact">
-      <h2>Contato</h2>
+    <section class="contato" id="contact" aria-labelledby="titulo-contato">
+      <div class="container contato-interior">
+        <div class="contato-texto">
+          <span class="badge">Fale conosco</span>
+          <div class="linha-verde" aria-hidden="true"></div>
 
-      <form>
-        <label>Nome:</label><br />
-        <input type="text" /><br /><br />
+          <h2 class="titulo-secao" id="titulo-contato">
+            Pronto para dirigir <br />
+            com energia do sol?
+          </h2>
 
-        <label>Email:</label><br />
-        <input type="email" /><br /><br />
+            <p>
+            Entre em contato com nossos especialistas, agende um test drive ou
+            solicite uma proposta personalizada para sua cidade.
+          </p>
 
-        <label>Telefone:</label><br />
-        <input type="text" /><br /><br />
+          <ul class="contato-info" aria-label="Informações de contato">
+            <li>
+              <span class="contato-icone" aria-hidden="true">📧</span>
+              <a href="mailto:erickciribeli@gmail.com.br">contato@solardrive.com.br</a>
+            </li>
+            <li>
+              <span class="contato-icone" aria-hidden="true">📞</span>
+              <a href="tel:+5532988730776">0800 4402-8922</a>
+            </li>
+            <li>
+              <span class="contato-icone" aria-hidden="true">📍</span>
+              <span>Casa do Erick Ciribeli — Muriaé, MG</span>
+            </li>
+        </div>
 
-        <label>Mensagem:</label><br />
-        <textarea rows="5" cols="30"></textarea><br /><br />
+        <form class="form-contato" id="form-contato" aria-label="Fomulário de contato SolarDrive">
+            <!-- campo: Nome -->
+            <div class="form-grupo">
+              <label for="nome" class="form-label">
+                Nome completo
+                <span class="obrigatorio" aria-label="campo obrigatório"
+                  >*</span
+                >
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                class="form-input"
+                placeholder="Seu nome completo"
+                required
+                autocomplete="name"
+              />
+            </div>
 
-        <button type="submit">Enviar</button>
-      </form>
-
-      <h3>Informações</h3>
-      <p>Email:</p>
-      <p>Telefone:</p>
-
-      <br />
+        </form>
+      </div>
     </section>
 
     <footer>
