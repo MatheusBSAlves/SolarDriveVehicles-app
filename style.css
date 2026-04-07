@@ -1,3 +1,5 @@
+/* ---- importacao de fontes ---- */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap");
 /* ------- variaveis para facilitar manutencao ---------- */
 :root {
   --cor-creme: #fffff0; /* fundo principal */
@@ -7,9 +9,17 @@
   --cor-terra: #4a3728; /* títulos e contrastes */
   --cor-branco: #ffffff;
   --cor-cinza-suave: #f0f0e0;
+  --cor-verde-solar: #2ecc71;
+  --cor-verde-escuro: #1a8a4a;
+  --cor-amarelo-sol: #f4c430;
+  --cor-cinza-chumbo: #1c1c1e;
+  --cor-cinza-medio: #2c2c2e;
+  --cor-cinza-claro: #8e8e93;
+  --cor-branco: #f5f5f7;
 
-  --fonte-titulo: "Playfair Display", Georgia, serif;
+  --fonte-titulo: "Syne", sans-serif;
   --fonte-corpo: "DM Sans", sans-serif;
+  --fonte-ui: "Space Grotesk", sans-serif;
 
   --raio-borda: 12px;
   --sombra-suave: 0 4px 24px rgba(45, 106, 45, 0.1);
@@ -33,11 +43,11 @@ html {
 }
 
 body {
-  background-color: var(--cor-creme);
-  color: var(--cor-terra);
+  background-color: var(--cor- cinza-chumbo);
+  color: var(--cor-branco);
   font-family: var(--fonte-corpo);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -51,7 +61,8 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -80,8 +91,10 @@ ul {
 
 /* fundo borda transparente */
 .fundo-transparente {
-  background-color: #6ec96ea1;
+  background-color: color-mix(in srgb, var(--cor-verde-claro) 80%, transparent);
   border-radius: 50px;
+  padding-block: 5rem 3rem;
+  backdrop-filter: blur(2px);
 }
 
 /* titulo principal de seção - tamanho fluido com 'clamp()' */
@@ -117,124 +130,295 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 240, 0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #dff0df;
+  background-color: rgba(28, 28, 30, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 151, 63, 0.397);
 }
 
-/* barra interna header — flexbox -logo + nav */
-.header-interior {
+/* Barra de navegação principal */
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
 }
 
-/* logo texto */
+/* Logo */
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+}
+
+.logo-texto {
   font-family: var(--fonte-titulo);
   font-size: 1.4rem;
-  color: var(--cor-verde-escuro);
+  font-weight: 800;
+  color: var(--cor-branco-puro);
+  letter-spacing: -0.5px;
+}
+
+.logo-texto span {
+  color: var(--cor-verde-solar);
+}
+
+/* Links de navegação */
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-/* sol logo */
-.logo-sol {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  font-size: 1rem;
-}
-
-/* lista - links da nav principal */
-nav ul {
-  display: flex;
   gap: 2rem;
-  align-items: center;
-}
-
-/* links individuais de nav */
-nav a {
+  font-family: var(--fonte-ui);
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--cor-terra);
-  transition: color var(--transicao);
-  position: relative;
 }
 
-/* sublinhado animado que aparece no hover*/ /* ( "TREM CHATO DE FAZE" ) */
-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--cor-verde-medio);
-  border-radius: 2px;
-  transition: width var(--transicao);
+.nav-links a {
+  color: var(--cor-cinza-claro);
+  transition: color 0.2s ease;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-nav a:hover {
-  color: var(--cor-verde-escuro);
+.nav-links a:hover {
+  color: var(--cor-verde-solar);
+  border-bottom-color: var(--cor-verde-solar);
 }
 
-/* botao CTA destacado na barra de navegação */
+/* Botão CTA do header */
 .btn-nav {
-  background: var(--cor-verde-claro);
-  color: var(--cor-verde-escuro) !important;
-  padding: 0.45rem 1.2rem;
+  background-color: var(--cor-verde-solar);
+  color: var(--cor-cinza-chumbo) !important;
+  font-weight: 700 !important;
+  padding: 0.6rem 1.4rem !important;
   border-radius: 50px;
-  font-weight: 500;
+  border-bottom: none !important;
   transition:
-    background var(--transicao),
-    transform var(--transicao);
+    background-color 0.2s ease,
+    transform 0.2s ease !important;
 }
 
 .btn-nav:hover {
-  background: var(--cor-verde-medio);
-  transform: scale(1.04);
+  background-color: var(--cor-verde-escuro) !important;
+  transform: translateY(-1px);
+}
+
+/* Redes Sociais no header */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-social a {
+  color: var(--cor-cinza-claro);
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-social a:hover {
+  color: var(--cor-verde-solar);
 }
 
 /* -------------- hero (banner principal) --------------  */
 
 .hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(135deg, var(--cinza-chumbo) 0%, #0d2b1a 60%, #0a1f13 100%); */
   background: url("https://i.pinimg.com/1200x/9b/fd/86/9bfd86de09a44b25f8edf471fe4362a7.jpg")
     no-repeat center/cover;
-  min-height: 90vh;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  padding-block: 5rem 3rem;
   position: relative;
   overflow: hidden;
+  padding: 6rem 2rem 4rem;
 }
 
-.hero * {
+/* Círculo decorativo de fundo (efeito solar) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(244, 196, 48, 0.12) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(46, 204, 113, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
   position: relative;
   z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(46, 204, 113, 0.15);
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  color: var(--verde-solar);
+  font-family: var(--fonte-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
 }
 
 .hero-titulo {
   font-family: var(--fonte-titulo);
   font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1;
-  color: var(--cor-creme);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
   margin-bottom: 1.5rem;
+  color: var(--branco-puro);
 }
 
-.hero p {
-  margin: 20px 0;
-  font-size: 18px;
-  color: var(--cor-creme);
-  justify-items: flex-end;
+.hero-titulo .destaque {
+  color: var(--verde-solar);
+}
+
+.hero-titulo .sol {
+  color: var(--amarelo-sol);
+}
+
+.hero-descricao {
+  font-size: 1.1rem;
+  color: var(--cinza-claro);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* Botões do Hero */
+.hero-botoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primario {
+  background-color: var(--verde-solar);
+  color: var(--cinza-chumbo);
+  font-family: var(--fonte-ui);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primario:hover {
+  background-color: var(--verde-escuro);
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: var(--branco);
+  font-family: var(--fonte-ui);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+  display: inline-block;
+}
+
+.btn-secundario:hover {
+  border-color: var(--verde-solar);
+  color: var(--verde-solar);
+}
+
+/* Imagem/ilustração do Hero */
+.hero-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-imagem img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(46, 204, 113, 0.1);
+}
+
+/* Stats abaixo do hero */
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-numero {
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--verde-solar);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--cinza-claro);
+  margin-top: 0.3rem;
+  font-family: var(--fonte-ui);
 }
 
 .btn {
@@ -317,7 +501,7 @@ button:hover {
   align-items: start;
 }
 
-.contato-texto p{
+.contato-texto p {
   font-weight: 300;
   color: #6b5a4e;
   margin-bottom: 2rem;
@@ -387,7 +571,9 @@ button:hover {
   font-size: 0.95rem;
   color: var(--cor-terra);
   background: var(--cor-creme);
-  transition: border-color var(--transicao), box-shadow var(--transicao);
+  transition:
+    border-color var(--transicao),
+    box-shadow var(--transicao);
   outline: none;
   appearance: none; /* remove estilo padrão do select */
 }
