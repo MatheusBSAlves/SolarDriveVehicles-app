@@ -1,210 +1,318 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
+    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SolarDrive Vehicles — Veículos compactos e scooters movidos a energia solar. Mobilidade limpa, acessível e estilosa para o dia a dia urbano." />
     <title>SolarDrive Vehicles</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plh7eecyn6CafxmKowwwFT+Ber5Z=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
+      <!-- -------------- CABEÇALHO E NAVEGAÇÃO -------------- -->
     <header>
-      <h1>SolarDriver Vehicles</h1>
       <nav>
-        <a href="#home">Início</a>
-        <a href="#cars">Modelos</a>
-        <a href="#tech">Tecnologia</a>
-        <a href="#sustain">Sustentabilidade</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
+        <!-- logo da solar drive -->
+        <a href="#inicio" class="logo" aria-label="SolarDrive Vehicles - Voltar ao inicio">
+          <span style="font-size: 2rem;">&#9728;</span>
+          <span class="logo-texto">Solar<span>Drive</span>
+        </a>
+
+        <ul class="nav-links" role="navigation" aria-label="Menu principal">
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#time">Nosso Time</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+        </ul>
+
       </nav>
-      <br />
     </header>
+      <!-- ---------------- CONTEUDO PRINCIPAL --------------- -->
+    <main>
+      <!-- SECAO HERO (BANNER PRINCIPAL)  -->
+      <section id="inicio" class="hero" aria-label="Apresentação principal">
+        <div id="inicio" class="hero-conteudo">
 
-    <section id="home">
-    <div class="hero">
-      <h2>Mobilidade movida pelo Sol</h2>
-      <p>Carros inteligentes, sustentáveis e independentes de combustível</p>
-      <a href="#cars" class="btn">Ver Modelos</a>
-    </div>
-  </section>
+          <div class="hero-texto fundo-transparente">
+            <span class="hero-badge">&#9889; Mobilidade 100% Solar</span>
 
-    <section id="cars">
-      <br />
-      <br />
-      <h2>Modelos</h2>
+            <h1 class="hero-titulo">
+              <span class="destaque">Mova-se</span> com o<br />
+              poder do<span class="sol"> sol.</span>
+            </h1>
 
-      <div class="car-container">
-        <div class="car-card">
-          <h3>SD-1 (Urbano)</h3>
-          <img
-            src="https://images.unsplash.com/photo-1549924231-f129b911e442"
-          />
-          <ul>
-            <li>Preço: R$ 120.000</li>
-            <li>Autonomia: 300 km</li>
-            <li>Bateria: 50 kWh</li>
-            <li>Velocidade máxima: 160 km/h</li>
-            <li>0-100 km/h: 8s</li>
-          </ul>
-          <button class="buy-btn">Comprar</button>
+            <p class="hero-descricao">
+              SolarDrive Vehicles fabrica veículos compactos e scooters movidos
+              exclusivamente a energia solar. Projetados para o ambiente urbano,
+              são uma alternativa limpa, acessível e estilosa para o seu dia a dia.
+            </p>
+
+          </div>
+
         </div>
+        
+      </section>
 
-        <div class="car-card">
-          <h3>SD-X (Esportivo)</h3>
-          <img
-            src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c"
-          />
-          <ul>
-            <li>Preço: R$ 280.000</li>
-            <li>Autonomia: 450 km</li>
-            <li>Bateria: 85 kWh</li>
-            <li>Velocidade máxima: 250 km/h</li>
-            <li>0-100 km/h: 3.5s</li>
-          </ul>
-          <button class="buy-btn">Comprar</button>
+      <section id="destaque">
+        <br />
+        <br />
+        <h2>Modelos</h2>
+
+        <div class="car-container">
+          <div class="car-card">
+            <h3>SD-1 (Urbano)</h3>
+            <img
+              src="https://images.unsplash.com/photo-1549924231-f129b911e442"
+            />
+            <ul>
+              <li>Preço: R$ 120.000</li>
+              <li>Autonomia: 300 km</li>
+              <li>Bateria: 50 kWh</li>
+              <li>Velocidade máxima: 160 km/h</li>
+              <li>0-100 km/h: 8s</li>
+            </ul>
+            <button class="buy-btn">Comprar</button>
+          </div>
+
+          <div class="car-card">
+            <h3>SD-X (Esportivo)</h3>
+            <img
+              src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c"
+            />
+            <ul>
+              <li>Preço: R$ 280.000</li>
+              <li>Autonomia: 450 km</li>
+              <li>Bateria: 85 kWh</li>
+              <li>Velocidade máxima: 250 km/h</li>
+              <li>0-100 km/h: 3.5s</li>
+            </ul>
+            <button class="buy-btn">Comprar</button>
+          </div>
+
+          <div class="car-card">
+            <h3>SD-Solar (Sustentável)</h3>
+            <img
+              src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8"
+            />
+            <ul>
+              <li>Preço: R$ 200.000</li>
+              <li>Autonomia: 500 km</li>
+              <li>Painéis solares no teto</li>
+              <li>Recarga automática com luz solar</li>
+            </ul>
+            <button class="buy-btn">Comprar</button>
+          </div>
         </div>
+      </section>
 
-        <div class="car-card">
-          <h3>SD-Solar (Sustentável)</h3>
-          <img
-            src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8"
-          />
-          <ul>
-            <li>Preço: R$ 200.000</li>
-            <li>Autonomia: 500 km</li>
-            <li>Painéis solares no teto</li>
-            <li>Recarga automática com luz solar</li>
-          </ul>
-          <button class="buy-btn">Comprar</button>
+      <section id="produtos">
+        <h2>Tecnologia</h2>
+
+        <h3>Baterias Avançadas</h3>
+        <p>
+          Utilizamos baterias de íon-lítio de alta densidade, garantindo maior
+          autonomia e menor tempo de recarga.
+        </p>
+
+        <h3>Inteligência Artificial</h3>
+        <p>
+          Os veículos contam com sistemas inteligentes que analisam o trânsito,
+          ajustam o consumo de energia e auxiliam na direção.
+        </p>
+
+        <h3>Direção Autônoma</h3>
+        <p>
+          Nível avançado de assistência ao motorista com sensores e câmeras.
+        </p>
+
+        <h3>Conectividade</h3>
+        <p>
+          Integração com smartphone, GPS em tempo real e atualizações remotas.
+        </p>
+
+        <br />
+      </section>
+
+      <section id="time">
+        <h2>Sustentabilidade</h2>
+
+        <p>A SolarDriver tem compromisso com o meio ambiente.</p>
+
+        <ul>
+          <li>Zero emissão de poluentes</li>
+          <li>Uso de energia solar</li>
+          <li>Materiais recicláveis</li>
+          <li>Redução da pegada de carbono</li>
+        </ul>
+
+        <br />
+      </section>
+
+      <section id="faq">
+        <h2>Sobre a Empresa</h2>
+
+        <p>
+          Fundada com o objetivo de revolucionar o mercado automotivo, a
+          SolarDriver Vehicles combina inovação, tecnologia e sustentabilidade.
+        </p>
+
+        <h3>Missão</h3>
+        <p>
+          Criar veículos eficientes e acessíveis para um futuro sustentável.
+        </p>
+
+        <h3>Visão</h3>
+        <p>Ser referência mundial em mobilidade elétrica.</p>
+
+        <h3>Valores</h3>
+        <ul>
+          <li>Inovação</li>
+          <li>Sustentabilidade</li>
+          <li>Qualidade</li>
+          <li>Tecnologia</li>
+        </ul>
+
+        <br />
+      </section>
+
+      <section class="contato" id="contact" aria-labelledby="titulo-contato">
+        <div class="container contato-interior">
+          <div class="contato-texto">
+            <span class="badge">Fale conosco</span>
+            <div class="linha-verde" aria-hidden="true"></div>
+
+            <h2 class="titulo-secao" id="titulo-contato">
+              Pronto para dirigir <br />
+              com energia do sol?
+            </h2>
+
+            <p>
+              Entre em contato com nossos especialistas, agende um test drive ou
+              solicite uma proposta personalizada para sua cidade.
+            </p>
+
+            <ul class="contato-info" aria-label="Informações de contato">
+              <li>
+                <span class="contato-icone" aria-hidden="true">📧</span>
+                <a href="mailto:erickciribeli@gmail.com.br"
+                  >contato@solardrive.com.br</a
+                >
+              </li>
+              <li>
+                <span class="contato-icone" aria-hidden="true">📞</span>
+                <a href="tel:+5532988730776">0800 4402-8922</a>
+              </li>
+              <li>
+                <span class="contato-icone" aria-hidden="true">📍</span>
+                <span>Casa do Erick Ciribelli — Muriaé, MG</span>
+              </li>
+            </ul>
+          </div>
+
+          <form
+            class="form-contato"
+            id="form-contato"
+            aria-label="Fomulário de contato SolarDrive"
+          >
+            <!-- campo: Nome -->
+            <div class="form-grupo">
+              <label for="nome" class="form-label">
+                Nome completo
+                <span class="obrigatorio" aria-label="campo obrigatório"
+                  >*</span
+                >
+              </label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                class="form-input"
+                placeholder="Seu nome completo"
+                required
+                autocomplete="name"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+      <!-- --------------------- RODAPÉ ---------------------- -->
+    <footer>
+      <div class="container">
+        <!-- footer-grid com logo + colunas de links -->
+        <div class="footer-grid">
+          <!-- coluna institucional -->
+          <div>
+            <p class="footer-logo">
+              <span aria-hidden="true">☀</span> SolarDrive Vehicles
+            </p>
+            <p class="footer-descricao">
+              Fabricante brasileira de veículos movidos exclusivamente a energia
+              solar. Nossa missão é democratizar a mobilidade sustentável nas
+              cidades.
+            </p>
+          </div>
+
+          <!-- nav: Empresa -->
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul>
+              <li><a href="#sobre">Sobre nós</a></li>
+              <li><a href="#beneficios">Missão</a></li>
+              <li><a href="#depoimentos">Depoimentos</a></li>
+              <li><a href="#">Imprensa</a></li>
+            </ul>
+          </div>
+
+          <!-- nav: Produtos -->
+          <div class="footer-col">
+            <h4>Produtos</h4>
+            <ul>
+              <li><a href="#produtos">SolarDrive City</a></li>
+              <li><a href="#produtos">SolarDrive Glide</a></li>
+              <li><a href="#">Acessórios</a></li>
+              <li><a href="#">Financiamento</a></li>
+            </ul>
+          </div>
+
+          <!-- nav: suporte -->
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <ul>
+              <li><a href="#">Central de ajuda</a></li>
+              <li><a href="#">Garantia</a></li>
+              <li><a href="#">Assistência técnica</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- /footer-grid -->
+
+        <!-- barra de copyright -->
+        <div class="footer-bottom">
+          <small
+            >© 2025 SolarDrive Vehicles. Todos os direitos reservados.</small
+          >
+          <small>
+            Feito com ☀️ e
+            <a href="#inicio">energia renovável</a>
+          </small>
         </div>
       </div>
-    </section>
-
-
-    <section id="tech">
-      <h2>Tecnologia</h2>
-
-      <h3>Baterias Avançadas</h3>
-      <p>
-        Utilizamos baterias de íon-lítio de alta densidade, garantindo maior
-        autonomia e menor tempo de recarga.
-      </p>
-
-      <h3>Inteligência Artificial</h3>
-      <p>
-        Os veículos contam com sistemas inteligentes que analisam o trânsito,
-        ajustam o consumo de energia e auxiliam na direção.
-      </p>
-
-      <h3>Direção Autônoma</h3>
-      <p>Nível avançado de assistência ao motorista com sensores e câmeras.</p>
-
-      <h3>Conectividade</h3>
-      <p>
-        Integração com smartphone, GPS em tempo real e atualizações remotas.
-      </p>
-
-      <br />
-    </section>
-
-    <section id="sustain">
-      <h2>Sustentabilidade</h2>
-
-      <p>A SolarDriver tem compromisso com o meio ambiente.</p>
-
-      <ul>
-        <li>Zero emissão de poluentes</li>
-        <li>Uso de energia solar</li>
-        <li>Materiais recicláveis</li>
-        <li>Redução da pegada de carbono</li>
-      </ul>
-
-      <br />
-    </section>
-
-    <section id="about">
-      <h2>Sobre a Empresa</h2>
-
-      <p>
-        Fundada com o objetivo de revolucionar o mercado automotivo, a
-        SolarDriver Vehicles combina inovação, tecnologia e sustentabilidade.
-      </p>
-
-      <h3>Missão</h3>
-      <p>Criar veículos eficientes e acessíveis para um futuro sustentável.</p>
-
-      <h3>Visão</h3>
-      <p>Ser referência mundial em mobilidade elétrica.</p>
-
-      <h3>Valores</h3>
-      <ul>
-        <li>Inovação</li>
-        <li>Sustentabilidade</li>
-        <li>Qualidade</li>
-        <li>Tecnologia</li>
-      </ul>
-
-      <br />
-    </section>
-
-    <section id="contact">
-      <h2>Contato</h2>
-
-      <form>
-        <label>Nome:</label><br />
-        <input type="text" /><br /><br />
-
-        <label>Email:</label><br />
-        <input type="email" /><br /><br />
-
-        <label>Telefone:</label><br />
-        <input type="text" /><br /><br />
-
-        <label>Mensagem:</label><br />
-        <textarea rows="5" cols="30"></textarea><br /><br />
-
-        <button type="submit">Enviar</button>
-      </form>
-
-      <h3>Informações</h3>
-      <p>Email:</p>
-      <p>Telefone:</p>
-
-      <br />
-    </section>
-
-    <footer class="footer">
-      <p>
-        Este site é protegido por reCAPTCHA e a Política de Privacidade e os
-        Termos de Serviço do Google se aplicam.
-      </p>
-
-      <p>© 2026 SolarDrive Vehicles. Todos os direitos reservados.</p>
-
-      <p>
-        SolarDrive Vehicles é uma empresa fictícia criada para fins acadêmicos.
-        Qualquer semelhança com empresas, produtos ou serviços reais é mera
-        coincidência.
-      </p>
-
-      <p>
-        A SolarDrive Vehicles fabrica carros compactos e scooters movidos
-        exclusivamente a energia solar. Projetados para ambientes urbanos,
-        nossos veículos oferecem uma alternativa limpa, acessível e estilosa
-        para o deslocamento cotidiano, contribuindo para um futuro mais
-        sustentável.
-      </p>
-
-      <p class="warning-title">AVISO SOBRE OFERTAS NÃO AUTORIZADAS</p>
-
-      <p>
-        A SolarDrive Vehicles não autoriza a venda de ações, franquias ou
-        oportunidades de investimento por terceiros. Qualquer oferta desse tipo
-        não é legítima e deve ser tratada com cautela.
-      </p>
-
-      <p class="logo">SolarDrive</p>
     </footer>
   </body>
 </html>
