@@ -1,4 +1,4 @@
-/* ------- variaveis globais ---------- */
+  /* ------- variaveis globais ---------- */
 :root {
   /* Cores principais */
   --verde-folha: #2d7d46;
@@ -11,6 +11,7 @@
   --azul-claro: #9fd4ee;
   --azul-fundo: #eaf5fb;
   --amarelo-sol: #f0c040;
+  --amarelo-escuro: #bb9b0b;
   --amarelo-claro: #faeab0;
   /* Cores neutras */
   --branco: #ffffff;
@@ -52,11 +53,11 @@
   --border-verde-80: rgba(81, 175, 111, 0.171);
   --border-branco-25: rgba(255, 255, 255, 0.25);
   --border-branco-08: rgba(255, 255, 255, 0.08);
-  --text-footer-75: rgba(255, 255, 240, 0.75);
+  --text-footer-75: rgba(255, 255, 240, 0.856);
   --border-footer-10: rgba(255, 255, 240, 0.1);
   --focus-verde: rgba(110, 201, 110, 0.2);
   --border-form: #e8f5e8;
   --bg-creme: rgba(255, 255, 240, 0.2);
   /* Transições */
-  --transicao: 0.45s ease;
+  --transicao: 0.3s ease;
 }
