@@ -25,6 +25,7 @@
   </head>
 
   <body>
+    <!-- -------------------------- CABEÇALHO ------------------------ -->
     <header>
       <nav>
         <a
@@ -39,254 +40,169 @@
         <ul class="nav-links" role="navigation" aria-label="Menu principal">
           <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#destaque">Nosso time</a></li>
+          <li><a href="#time">Nosso time</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact" class="btn-nav">Fale Conosco</a></li>
+          <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- ------------------------ AREA PRINCIPAL --------------------- -->
     <main>
+      <!-- ----------------------- SECTION HERO ----------------------- -->
       <section id="inicio" class="hero" aria-label="Apresentação principal">
         <div class="hero-conteudo">
-          <div class="hero-texto">
+          <div class="hero-texto fundo-transparente">
             <span class="hero-badge">&#9889; Mobilidade 100% Solar</span>
 
             <h1 class="hero-titulo">
-              <span class="destaque">Mova-se</span> com o<br />
-              poder do<span class="sol"> sol.</span>
+              Sua jornada começa<br />
+              onde o <span class="sol">sol brilha.</span>
             </h1>
 
             <p class="hero-descricao">
-              SolarDrive Vehicles fabrica veículos compactos e scooters movidos
-              exclusivamente a energia solar. Projetados para o ambiente urbano,
-              são uma alternativa limpa, acessível e estilosa para o seu dia a
-              dia.
+              Veículos compactos e scooters elétricos alimentados exclusivamente
+              por energia solar. Projetados para o dia a dia urbano, de forma
+              limpa, silenciosa e acessível.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="diferenciais">
-        <h2>Diferenciais</h2>
-        <div class="diferenciais-grid">
-          <div class="diferencial-item">
-            <span class="diferencial-icone">&#9889;</span>
-            <h3>100% Solar</h3>
-            <p>
-              Nossos veículos são alimentados exclusivamente por energia solar,
-              eliminando a necessidade de recargas elétricas convencionais.
-            </p>
-          </div>
+      <!-- ------------------- SECTION DIFERENCIAIS ------------------- -->
+      <section
+        id="diferenciais"
+        class="diferenciais"
+        aria-labelledby="diferenciais"
+      >
+        <div class="container">
+          <h2 id="titulo-diferenciais" class="secao-titulo">
+            Por que SolarDrive?
+          </h2>
+          <p class="secao-subtitulo">
+            Cada detalhe foi pensado para tornar sua mobilidade mais
+            inteligente, sustentável e econômica.
+          </p>
 
-          <div class="diferencial-item">
-            <span class="diferencial-icone">&#128640;</span>
-            <h3>Design Inovador</h3>
-            <p>
-              Combinação de estética futurista com funcionalidade, ideal para o
-              ambiente urbano.
-            </p>
-          </div>
+          <!-- Grade de diferenciais -->
+          <div class="diferenciais-grid">
+            <article class="card-diferencial">
+              <span class="icone-diferencial" aria-hidden="true">&#9728;</span>
+              <h3>Energia Solar</h3>
+              <p>
+                Painéis fotovoltaicos integrados recarregam a bateria durante o
+                uso, sem tomada.
+              </p>
+            </article>
 
-          <div class="diferencial-item">
-            <span class="diferencial-icone">&#127758;</span>
-            <h3>Sustentabilidade</h3>
-            <p>
-              Compromisso com o meio ambiente através do uso de materiais
-              recicláveis e processos de fabricação eco-friendly.
-            </p>
-          </div>
+            <article class="card-diferencial">
+              <span class="icone-diferencial" aria-hidden="true"
+                >&#127807;</span
+              >
+              <h3>Zero Emissão</h3>
+              <p>
+                Mobilidade 100% limpa. Contribua ativamente para um futuro
+                urbano mais verde.
+              </p>
+            </article>
 
-          <div class="diferencial-item">
-            <span class="diferencial-icone">&#128187;</span>
-            <h3>Tecnologia Avançada</h3>
-            <p>
-              Equipados com sistemas inteligentes, conectividade total e
-              recursos de assistência ao motorista.
-            </p>
+            <article class="card-diferencial">
+              <span class="icone-diferencial" aria-hidden="true"
+                >&#128178;</span
+              >
+              <h3>Economia Real</h3>
+              <p>
+                Sem combustível, sem altos custos de manutenção. Seu bolso
+                agradece.
+              </p>
+            </article>
+
+            <article class="card-diferencial">
+              <span class="icone-diferencial" aria-hidden="true"
+                >&#128272;</span
+              >
+              <h3>Tecnologia Smart</h3>
+              <p>
+                Conectividade via app: monitore bateria, localização e
+                manutenção em tempo real.
+              </p>
+            </article>
+
+            <article class="card-diferencial">
+              <span class="icone-diferencial" aria-hidden="true"
+                >&#127942;</span
+              >
+              <h3>Design Premiado</h3>
+              <p>
+                Estética moderna e compacta pensada para o estilo de vida urbano
+                atual.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="cars">
-        <h2>Modelos</h2>
+      <!-- --------------------- SECTION PRODUTOS --------------------- -->
+      <section id="produtos" class="produtos" aria-labelledby="titulo-produtos">
+        <div class="container">
+          <h2 id="titulo-produtos" class="secao-titulo">Tecnologia</h2>
+          <h3>Baterias Avançadas</h3>
+          <p>
+            Utilizamos baterias de íon-lítio de alta densidade, garantindo maior
+            autonomia e menor tempo de recarga.
+          </p>
 
-        <div class="car-container">
-          <div class="car-card">
-            <h3>SD-1 (Urbano)</h3>
-            <img
-              src="https://images.unsplash.com/photo-1549924231-f129b911e442"
-              alt="Modelo SD-1 Urbano"
-            />
-            <ul>
-              <li>Preço: R$ 120.000</li>
-              <li>Autonomia: 300 km</li>
-              <li>Bateria: 50 kWh</li>
-              <li>Velocidade máxima: 160 km/h</li>
-              <li>0-100 km/h: 8s</li>
-            </ul>
-            <button class="btn-primario">Comprar</button>
-          </div>
-          <div class="car-roussel">
-            <div class="car-d">
-              <h3>SD-1 (Urbano)</h3>
-              <img
-                src="https://images.unsplash.com/photo-1549924231-f129b911e442"
-              />
-              <ul>
-                <li>Preço: R$ 120.000</li>
-                <li>Autonomia: 300 km</li>
-                <li>Bateria: 50 kWh</li>
-                <li>Velocidade máxima: 160 km/h</li>
-                <li>0-100 km/h: 8s</li>
-              </ul>
-              <button class="buy-btn">Comprar</button>
-            </div>
+          <h3>Inteligência Artificial</h3>
+          <p>
+            Os veículos contam com sistemas inteligentes que analisam o trânsito
+            e auxiliam na direção.
+          </p>
 
-            <div class="car-card">
-              <h3>SD-X (Esportivo)</h3>
-              <img
-                src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c"
-                alt="Modelo SD-X Esportivo"
-              />
-              <ul>
-                <li>Preço: R$ 280.000</li>
-                <li>Autonomia: 450 km</li>
-                <li>Bateria: 85 kWh</li>
-                <li>Velocidade máxima: 250 km/h</li>
-                <li>0-100 km/h: 3.5s</li>
-              </ul>
-              <button class="btn-primario">Comprar</button>
-            </div>
-            <div class="car-d">
-              <h3>SD-X (Esportivo)</h3>
-              <img
-                src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c"
-              />
-              <ul>
-                <li>Preço: R$ 280.000</li>
-                <li>Autonomia: 450 km</li>
-                <li>Bateria: 85 kWh</li>
-                <li>Velocidade máxima: 250 km/h</li>
-                <li>0-100 km/h: 3.5s</li>
-              </ul>
-              <button class="buy-btn">Comprar</button>
-            </div>
+          <h3>Direção Autônoma</h3>
+          <p>
+            Nível avançado de assistência ao motorista com sensores e câmeras.
+          </p>
 
-            <div class="car-card">
-              <h3>SD-Solar (Sustentável)</h3>
-              <img src="c" alt="Modelo SD-Solar" />
-              <ul>
-                <li>Preço: R$ 200.000</li>
-                <li>Autonomia: 500 km</li>
-                <li>Painéis solares no teto</li>
-                <li>Recarga automática com luz solar</li>
-              </ul>
-              <button class="btn-primario">Comprar</button>
-            </div>
-            <div class="car-d">
-              <h3>SD-Solar (Sustentável)</h3>
-              <img
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8"
-              />
-              <ul>
-                <li>Preço: R$ 200.000</li>
-                <li>Autonomia: 500 km</li>
-                <li>Painéis solares no teto</li>
-                <li>Recarga automática com luz solar</li>
-              </ul>
-              <button class="buy-btn">Comprar</button>
-            </div>
-
-            <div class="car-d">
-              <h3>SD-Solar (Sustentável)</h3>
-              <img
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8"
-              />
-              <ul>
-                <li>Preço: R$ 200.000</li>
-                <li>Autonomia: 500 km</li>
-                <li>Painéis solares no teto</li>
-                <li>Recarga automática com luz solar</li>
-              </ul>
-              <button class="buy-btn">Comprar</button>
-            </div>
-          </div>
-
-          <button class="car-roussel-btn prev" onclick="moveSlide(-1)">
-            &#10094;
-          </button>
-          <button class="car-roussel-btn next" onclick="moveSlide(1)">
-            &#10095;
-          </button>
+          <h3>Conectividade</h3>
+          <p>
+            Integração com smartphone, GPS em tempo real e atualizações remotas.
+          </p>
+          <br />
         </div>
-      </section>
-
-      <!-- --------------------- SECTION MODELOS --------------------- -->
-      <section id="produtos">
-        <h2>Tecnologia</h2>
-        <h3>Baterias Avançadas</h3>
-        <p>
-          Utilizamos baterias de íon-lítio de alta densidade, garantindo maior
-          autonomia e menor tempo de recarga.
-        </p>
-
-        <h3>Inteligência Artificial</h3>
-        <p>
-          Os veículos contam com sistemas inteligentes que analisam o trânsito e
-          auxiliam na direção.
-        </p>
-
-        <h3>Direção Autônoma</h3>
-        <p>
-          Nível avançado de assistência ao motorista com sensores e câmeras.
-        </p>
-
-        <h3>Conectividade</h3>
-        <p>
-          Integração com smartphone, GPS em tempo real e atualizações remotas.
-        </p>
-        <br />
       </section>
 
       <!-- -------------------- SECTION NOSSO TIME ------------------- -->
-      <section id="time">
-        <h2>Sustentabilidade</h2>
-        <p>A SolarDrive tem compromisso com o meio ambiente.</p>
-        <ul>
-          <li>Zero emissão de poluentes</li>
-          <li>Uso de energia solar</li>
-          <li>Materiais recicláveis</li>
-          <li>Redução da pegada de carbono</li>
-        </ul>
-        <br />
+      <section id="time" class="time" aria-labelledby="titulo-time">
+        <div class="container"></div>
       </section>
 
       <!-- ----------------------- SECTION FAQ ----------------------- -->
-      <section id="faq">
-        <h2>Sobre a Empresa</h2>
-        <p>
-          Fundada com o objetivo de revolucionar o mercado automotivo, a
-          SolarDrive Vehicles combina inovação e tecnologia.
-        </p>
+      <section id="faq" class="faq" aria-labelledby="titulo-faq">
+        <div class="container">
+          <h2>Sobre a Empresa</h2>
+          <p>
+            Fundada com o objetivo de revolucionar o mercado automotivo, a
+            SolarDrive Vehicles combina inovação e tecnologia.
+          </p>
 
-        <h3>Missão</h3>
-        <p>
-          Criar veículos eficientes e acessíveis para um futuro sustentável.
-        </p>
+          <h3>Missão</h3>
+          <p>
+            Criar veículos eficientes e acessíveis para um futuro sustentável.
+          </p>
 
-        <h3>Visão</h3>
-        <p>Ser referência mundial em mobilidade elétrica.</p>
+          <h3>Visão</h3>
+          <p>Ser referência mundial em mobilidade elétrica.</p>
 
-        <h3>Valores</h3>
-        <ul>
-          <li>Inovação | Sustentabilidade | Qualidade | Tecnologia</li>
-        </ul>
-        <br />
+          <h3>Valores</h3>
+          <ul>
+            <li>Inovação | Sustentabilidade | Qualidade | Tecnologia</li>
+          </ul>
+          <br />
+        </div>
       </section>
 
       <!-- --------------------- SECTION CONTATO --------------------- -->
-      <section class="contato" id="contact" aria-labelledby="titulo-contato">
+      <section class="contato" id="contato" aria-labelledby="titulo-contato">
         <div class="container contato-interior">
           <div class="contato-texto">
             <span class="badge">Fale conosco</span>
@@ -318,30 +234,71 @@
           </div>
 
           <form
-            class="form-contato"
-            id="form-contato"
-            aria-label="Fomulário de contato SolarDrive"
+            action="#"
+            method="post"
+            aria-label="Formulário de contato SolarDrive"
+            novalidate
           >
-            <div class="form-grupo">
-              <label for="nome" class="form-label">
-                Nome completo <span class="obrigatorio">*</span>
-              </label>
+            <!-- Nome -->
+            <div class="campo-grupo">
+              <label for="nome">Nome completo</label>
               <input
                 type="text"
                 id="nome"
                 name="nome"
-                class="form-input"
-                placeholder="Seu nome completo"
-                required
+                placeholder="Seu nome"
                 autocomplete="name"
+                required
               />
             </div>
-            <button type="submit" class="btn-primario">Enviar Mensagem</button>
+
+            <!-- E-mail -->
+            <div class="campo-grupo">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seu@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <!-- Assunto -->
+            <div class="campo-grupo">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto" required>
+                <option value="" disabled selected>Selecione um assunto</option>
+                <option value="cotacao">Quero fazer uma cotação</option>
+                <option value="test-drive">Agendar test drive</option>
+                <option value="suporte">Suporte técnico</option>
+                <option value="parceria">Proposta de parceria</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <!-- Mensagem -->
+            <div class="campo-grupo">
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Escreva sua mensagem aqui..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Botão de envio -->
+            <button type="submit" class="btn-enviar">
+              Enviar Mensagem &#8594;
+            </button>
           </form>
         </div>
       </section>
     </main>
 
+    <!-- ---------------------------- RODAPÉ ------------------------- -->
     <footer>
       <div class="container">
         <div class="footer-conteudo">
