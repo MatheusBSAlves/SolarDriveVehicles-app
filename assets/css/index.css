@@ -62,11 +62,13 @@ ol {
 
 .fundo-transparente {
   display: inline-block;
-  padding: 0.4rem 1rem;
+  padding: 1rem 2rem;
   border-radius: 15px;
   margin-bottom: 1.5rem;
-  background-color: rgba(6, 87, 33, 0.281);
-  backdrop-filter: brightness(60%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(45, 125, 70, 0.25);
 }
 
 .secao-titulo {
@@ -92,10 +94,26 @@ header {
   top: 0;
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.93);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1.5px solid var(--cinza-suave);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  /* border-bottom: 1.5px solid var(--cinza-suave); */
   box-shadow: 0 2px 16px rgba(45, 125, 70, 0.07);
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: linear-gradient(
+    90deg,
+    var(--amarelo-claro),
+    var(--verde-claro),
+    var(--azul-claro),
+    var(--verde-claro)
+  );
 }
 
 nav {
@@ -111,6 +129,12 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+.logo span.sol {
+  font-size: 1.8rem;
+  color: var(--amarelo-sol);
+  text-shadow: 0 2px 16px rgba(240, 192, 64, 0.25);
 }
 
 .logo-texto {
@@ -168,7 +192,7 @@ nav {
 
 /* -------------- hero (banner principal) -------------- */
 .hero {
-  min-height: 90vh;
+  min-height: 91vh;
   display: flex;
   align-items: center;
   background: url("https://i.pinimg.com/1200x/9b/fd/86/9bfd86de09a44b25f8edf471fe4362a7.jpg")
@@ -234,6 +258,9 @@ nav {
   padding: 0.4rem 1rem;
   border-radius: 50px;
   margin-bottom: 1.5rem;
+  box-shadow: inherit;
+  box-shadow: initial;
+  box-shadow: unset;
 }
 
 .hero-titulo {
@@ -484,9 +511,9 @@ footer .logo-texto span {
 
 .footer-col h4 {
   font-family: var(--fonte-titulo);
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--creme);
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .footer-col ul {
