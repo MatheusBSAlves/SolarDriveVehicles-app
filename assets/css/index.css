@@ -161,10 +161,13 @@ nav {
   gap: 0.6rem;
 }
 
-.logo span.sol {
-  font-size: 1.8rem;
-  color: var(--amarelo-sol);
-  text-shadow: 0 2px 16px rgba(240, 192, 64, 0.25);
+.sol-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain; 
+  display: inline;
+  vertical-align: middle;
+  top: -2px; /*suba ou desça conforme necessário */
 }
 
 .logo-texto {
@@ -618,6 +621,13 @@ footer::before {
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--border-footer-10);
   margin-bottom: 2rem;
+}
+
+/* ---logo --- */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 footer .logo-texto {
