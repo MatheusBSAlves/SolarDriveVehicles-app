@@ -1,0 +1,62 @@
+/* ------- variaveis globais ---------- */
+:root {
+  /* Cores principais */
+  --verde-folha: #2d7d46;
+  --verde-medio: #3ea05a;
+  --verde-claro: #7ec99a;
+  --verde-menta: #c8eed8;
+  --verde-fundo: #eef7f1;
+  /* Cores adicionais */
+  --azul-ceu: #4a9eca;
+  --azul-claro: #9fd4ee;
+  --azul-fundo: #eaf5fb;
+  --amarelo-sol: #f0c040;
+  --amarelo-claro: #faeab0;
+  /* Cores neutras */
+  --branco: #ffffff;
+  --creme: #f7faf8;
+  --cinza-areia: #f0f4f2;
+  --cinza-suave: #dde8e2;
+  --cinza-texto: #5a7265;
+  --escuro: #1d3829;
+  --terra: #6b5a4e;
+  /* Cores adicionais (mapeadas das cores usadas no arquivo) */
+  --cor-terra: #6b5a4e;
+  --cor-verde-solar: #2ecc71;
+  --cor-verde-escuro: #27ae60;
+  --cor-cinza-claro: #95a5a6;
+  --cor-branco: #ffffff;
+  --cor-creme: #fffff0;
+  --cor-verde-medio: #3ea05a;
+  --cor-vermelho: #c0392b;
+  --cor-turquesa: #00ffcc;
+  --cor-turquesa-escuro: #00ccaa;
+  --cor-escuro-card: #111111;
+  --cor-card-bg: #1a1a1a;
+  /* Fontes */
+  --fonte-titulo: "Bricolage Grotesque", sans-serif;
+  --fonte-corpo: "Nunito Sans", sans-serif;
+  --fonte-ui: "Nunito Sans", sans-serif;
+  /* Espaçamento e borda */
+  --raio-borda: 12px;
+  /* Sombras */
+  --sombra-suave: 0 4px 24px rgba(45, 106, 45, 0.1);
+  --sombra-card: 0 8px 40px rgba(45, 106, 45, 0.14);
+  --sombra-verde-clara: 0 0 60px rgba(46, 204, 113, 0.1);
+  --sombra-turquesa-baixa: 0 0 20px rgba(0, 255, 204, 0.1);
+  --sombra-turquesa-media: 0 0 30px rgba(0, 255, 204, 0.3);
+  --sombra-preta-media: 0 40px 80px rgba(0, 0, 0, 0.5);
+  /* RGBA - transparências */
+  --bg-header: rgba(255, 255, 240, 0.925);
+  --border-verde-40: rgba(45, 125, 70, 0.07);
+  --border-verde-80: rgba(81, 175, 111, 0.171);
+  --border-branco-25: rgba(255, 255, 255, 0.25);
+  --border-branco-08: rgba(255, 255, 255, 0.08);
+  --text-footer-75: rgba(255, 255, 240, 0.75);
+  --border-footer-10: rgba(255, 255, 240, 0.1);
+  --focus-verde: rgba(110, 201, 110, 0.2);
+  --border-form: #e8f5e8;
+  --bg-creme: rgba(255, 255, 240, 0.2);
+  /* Transições */
+  --transicao: 0.45s ease;
+}
