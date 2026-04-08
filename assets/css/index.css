@@ -43,9 +43,8 @@ ol {
 
 /* -------- classes reutilizaveis para estrutura e estilo de secoes gerais ----------- */
 .container {
-  width: 90%;
-  max-width: 1160px;
-  margin-inline: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .badge {
@@ -70,12 +69,13 @@ ol {
   backdrop-filter: brightness(60%);
 }
 
-.titulo-secao {
+.secao-titulo {
   font-family: var(--fonte-titulo);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.8px;
   color: var(--escuro);
-  line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .linha-verde {
@@ -171,23 +171,8 @@ nav {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background:
-    radial-gradient(
-      ellipse 70% 60% at 80% 30%,
-      rgba(158, 212, 238, 0.28) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 60% 50% at 10% 80%,
-      rgba(126, 201, 154, 0.26) 0%,
-      transparent 65%
-    ),
-    radial-gradient(
-      ellipse 40% 40% at 50% 5%,
-      rgba(240, 192, 64, 0.14) 0%,
-      transparent 60%
-    ),
-    linear-gradient(160deg, #eef7f1 0%, #f0f8ff 50%, #f7faf8 100%);
+  background: url("https://i.pinimg.com/1200x/9b/fd/86/9bfd86de09a44b25f8edf471fe4362a7.jpg")
+    no-repeat center/cover;
   position: relative;
   overflow: hidden;
   padding: 6rem 2rem 4rem;
@@ -196,12 +181,18 @@ nav {
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: url("https://i.pinimg.com/1200x/9b/fd/86/9bfd86de09a44b25f8edf471fe4362a7.jpg")
-    no-repeat center/cover;
+  top: -120px;
+  right: -180px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(240, 192, 64, 0.18) 0%,
+    transparent 65%
+  );
+  border-radius: 50%;
   pointer-events: none;
 }
-
 .hero::after {
   content: "";
   position: absolute;
@@ -276,6 +267,29 @@ nav {
   margin-bottom: 2.5rem;
   line-height: 1.8;
 }
+/* ----------------- secao diferenciais ---------------- */
+.diferenciais {
+  background-color: var(--cinza-areia);
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.diferenciais::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--verde-claro),
+    var(--azul-claro),
+    var(--amarelo-claro),
+    var(--verde-claro)
+  );
+}
 
 /* ----------------- cards e destaques ---------------- */
 .car-container {
@@ -310,30 +324,28 @@ nav {
   border-radius: 10px;
 }
 
-button {
-  padding: 10px 20px;
-  background: var(--cor-turquesa);
+.btn-primario {
+  background-color: var(--verde-folha);
+  color: var(--branco);
+  font-family: var(--fonte-ui);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: inline-block;
+  box-shadow: 0 4px 16px rgba(45, 125, 70, 0.3);
 }
 
-button:hover {
-  background: var(--cor-turquesa-escuro);
-}
-
-.buy-btn {
-  margin-top: 10px;
-  width: 100%;
-  padding: 10px;
-  background: var(--cor-turquesa);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.buy-btn:hover {
-  background: var(--cor-turquesa-escuro);
+.btn-primario:hover {
+  background-color: var(--verde-medio);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(45, 125, 70, 0.38);
 }
 
 /* ----------------- contato form ---------------- */
@@ -426,12 +438,27 @@ button:hover {
 
 /* -------------- footer -------------- */
 footer {
-  background: var(--terra);
-  color: var(--text-footer-75);
-  padding-block: 4rem 2rem;
+  background: linear-gradient(160deg, var(--escuro) 0%, #0f2318 100%);
+  padding: 3rem 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--verde-claro),
+    var(--azul-claro),
+    var(--amarelo-claro)
+  );
 }
 
-.footer-grid {
+.footer-conteudo {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
@@ -440,14 +467,11 @@ footer {
   margin-bottom: 2rem;
 }
 
-.footer-logo {
-  font-family: var(--fonte-titulo);
-  font-size: 1.3rem;
-  color: var(--creme);
-  margin-bottom: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+footer .logo-texto {
+  color: var(--branco);
+}
+footer .logo-texto span {
+  color: var(--verde-claro);
 }
 
 .footer-descricao {
@@ -455,6 +479,7 @@ footer {
   font-weight: 300;
   line-height: 1.7;
   max-width: 280px;
+  color: var(--text-footer-75);
 }
 
 .footer-col h4 {
@@ -468,6 +493,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  color: var(--text-footer-75);
 }
 
 .footer-col a {
@@ -487,6 +513,7 @@ footer {
   font-size: 0.8rem;
   flex-wrap: wrap;
   gap: 0.5rem;
+  color: var(--text-footer-75);
 }
 
 .footer-bottom a {
