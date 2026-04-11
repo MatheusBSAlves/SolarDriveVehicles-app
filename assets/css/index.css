@@ -443,6 +443,75 @@ nav {
   padding: 5rem 2rem;
   background-color: var(--branco);
 }
+.faq-lista {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 800px;
+}
+.faq-titulo {
+  background-color: var(--creme);
+  border: 1.5px solid var(--cinza-suave);
+  border-radius: 14px;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  text-align: center;
+}
+
+.faq-subtitulo {
+  background-color: var(--creme);
+  border: 1.5px solid var(--cinza-suave);
+  border-radius: 14px;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  text-align: center;
+}
+.faq-item:hover {
+  border-color: var(--verde-claro);
+  box-shadow: 0 2px 14px rgba(45, 125, 70, 0.09);
+}
+.faq-pergunta {
+  font-family: var(--fonte-ui);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--escuro);
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-pergunta::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--verde-folha);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.faq-resposta {
+  padding: 0 1.5rem 1.25rem;
+  color: var(--cinza-texto);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  border-top: 1px solid var(--cinza-suave);
+}
+.faq-resposta ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.faq-resposta ul li {
+  margin-bottom: 0.3rem;
+}
+.faq-resposta ul ul {
+  list-style: circle;
+  margin-top: 0.3rem;
+}
 
 /* ==================================================== */
 /* ----------------- sec-contato e form --------------- */
