@@ -442,6 +442,9 @@ nav {
 .faq {
   padding: 5rem 2rem;
   background-color: var(--branco);
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr; 
 }
 .faq-lista {
   margin-top: 2rem;
@@ -459,6 +462,10 @@ nav {
     border-color 0.2s,
     box-shadow 0.2s;
   text-align: center;
+}
+
+.ol #faq {
+  list-style: circle;
 }
 
 .faq-subtitulo {
@@ -486,6 +493,28 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
+#1r {
+  grid-row: 1;
+}
+
+#2r {
+  grid-row: 2;
+}
+
+#3r {
+  grid-row: 3;
+}
+
+
+#1c {
+  grid-column: 1;
+}
+
+#2c {
+  grid-column: 2;
+}
+
 .faq-pergunta::after {
   content: "+";
   font-size: 1.4rem;
