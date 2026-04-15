@@ -306,98 +306,107 @@
       </section>
 
       <!-- --------------------- SECTION CONTATO --------------------- -->
-      <section class="contato" id="contato" aria-labelledby="titulo-contato">
-        <div class="container contato-interior">
-          <div class="contato-texto">
-            <span class="badge">Fale conosco</span>
-            <div class="linha-verde" aria-hidden="true"></div>
+      <section id="contato" class="contato" aria-labelledby="titulo-contato">
+        <div class="container">
+          <h2 id="titulo-contato" class="secao-titulo">Fale Conosco</h2>
+          <p class="secao-subtitulo">
+            Pronto para fazer parte da revolução solar? Entre em contato e nossa
+            equipe te atende.
+          </p>
 
-            <h2 class="secao-titulo" id="titulo-contato">
-              Pronto para dirigir <br />
-              com energia do sol?
-            </h2>
+          <div class="contato-grid">
+            <!-- Informações de contato -->
+            <address class="contato-info">
+              <h3>Vamos conversar!</h3>
+              <p>
+                Nossa equipe está pronta para responder suas dúvidas, fazer uma
+                cotação personalizada ou agendar um test drive em um de nossos
+                showrooms.
+              </p>
 
-            <p>
-              Entre em contato com nossos especialistas ou agende um test drive.
-            </p>
+              <p class="contato-detalhe">
+                <span>&#128205;</span>
+                <span>Av. do Sol, 999 — São Paulo, SP</span>
+              </p>
+              <p class="contato-detalhe">
+                <span>&#128222;</span>
+                <span>(35) 3000-9999</span>
+              </p>
+              <p class="contato-detalhe">
+                <span>&#128140;</span>
+                <span>contato@solardrive.com.br</span>
+              </p>
+              <p class="contato-detalhe">
+                <span>&#128336;</span>
+                <span>Seg–Sex: 8h às 18h | Sáb: 9h às 13h</span>
+              </p>
+            </address>
 
-            <ul class="contato-info" aria-label="Informações de contato">
-              <li>
-                <span class="contato-icone" aria-hidden="true">📧</span>
-                contato@solardrive.com.br
-              </li>
-              <li>
-                <span class="contato-icone" aria-hidden="true">📞</span> 0800
-                4402-8922
-              </li>
-              <li>
-                <span class="contato-icone" aria-hidden="true">📍</span> Muriaé,
-                MG
-              </li>
-            </ul>
+            <!-- Formulário de contato -->
+            <form
+              action="#"
+              method="post"
+              aria-label="Formulário de contato SolarDrive"
+              novalidate
+            >
+              <!-- Nome -->
+              <div class="campo-grupo">
+                <label for="nome">Nome completo</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <!-- E-mail -->
+              <div class="campo-grupo">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <!-- Assunto -->
+              <div class="campo-grupo">
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto" required>
+                  <option value="" disabled selected>
+                    Selecione um assunto
+                  </option>
+                  <option value="cotacao">Quero fazer uma cotação</option>
+                  <option value="test-drive">Agendar test drive</option>
+                  <option value="suporte">Suporte técnico</option>
+                  <option value="parceria">Proposta de parceria</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <!-- Mensagem -->
+              <div class="campo-grupo">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Escreva sua mensagem aqui..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Botão de envio -->
+              <button type="submit" class="btn-enviar">
+                Enviar Mensagem &#8594;
+              </button>
+            </form>
           </div>
-
-          <form
-            action="#"
-            method="post"
-            aria-label="Formulário de contato SolarDrive"
-            novalidate
-          >
-            <!-- Nome -->
-            <div class="campo-grupo">
-              <label for="nome">Nome completo</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Seu nome"
-                autocomplete="name"
-                required
-              />
-            </div>
-
-            <!-- E-mail -->
-            <div class="campo-grupo">
-              <label for="email">E-mail</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="seu@email.com"
-                autocomplete="email"
-                required
-              />
-            </div>
-
-            <!-- Assunto -->
-            <div class="campo-grupo">
-              <label for="assunto">Assunto</label>
-              <select id="assunto" name="assunto" required>
-                <option value="" disabled selected>Selecione um assunto</option>
-                <option value="cotacao">Quero fazer uma cotação</option>
-                <option value="test-drive">Agendar test drive</option>
-                <option value="suporte">Suporte técnico</option>
-                <option value="parceria">Proposta de parceria</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-
-            <!-- Mensagem -->
-            <div class="campo-grupo">
-              <label for="mensagem">Mensagem</label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                placeholder="Escreva sua mensagem aqui..."
-                required
-              ></textarea>
-            </div>
-
-            <!-- Botão de envio -->
-            <button type="submit" class="btn-enviar">
-              Enviar Mensagem &#8594;
-            </button>
-          </form>
         </div>
       </section>
     </main>
