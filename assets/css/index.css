@@ -264,9 +264,15 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+<<<<<<< Updated upstream
   flex-direction: row;
   align-items: center;
   width: 100%;
+=======
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+>>>>>>> Stashed changes
   position: relative;
   z-index: 1;
 }
@@ -762,8 +768,7 @@ input[name="slider"] {
 }
 
 .carousel-container {
-  width: 800px;
-  height: 400px;
+  width: 60%;
   overflow: hidden;
   position: relative;
   margin: auto;
