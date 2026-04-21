@@ -45,7 +45,7 @@
         <ul class="nav-links" role="navigation" aria-label="Menu principal">
           <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#time">Nosso time</a></li>
+          <li><a href="#time">Sobre nós</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
         </ul>
@@ -151,12 +151,13 @@
       <section id="produtos" class="produtos" aria-labelledby="titulo-produtos">
         <div class="container">
           <!-- Título da seção -->
-          <h2 id="titulo-produtos" class="secao-titulo">
-            Modelos recomendados
-          </h2>
-
-          <!-- Container do carrossel -->
+          <h2 id="titulo-produtos" class="secao-titulo">Modelos Disponíveis</h2>
+          <p class="secao-subtitulo">
+            Escolha o modelo que se encaixa perfeitamente no seu estilo de vida
+            urbano.
+          </p>
         </div>
+
         <div class="carousel-container">
           <!-- Inputs de rádio para controle dos slides -->
           <input type="radio" name="slider" id="slide1" checked />
@@ -165,75 +166,128 @@
 
           <!-- Container dos slides -->
           <div class="slides">
-            <!-- Slide 1: SolarDrive Solar -->
+            <!-- Slide 1: SolarDrive Urban -->
             <article class="slide">
               <figure class="image-column">
                 <img
                   src="assets/img/sd-solar.jpg"
-                  alt="SolarDrive Solar - Modelo básico movido a energia solar"
+                  alt="SolarDrive Urban - Scooter compacta para mobilidade urbana"
                 />
               </figure>
               <div class="info-column">
-                <h3>ESPECIFICAÇÕES</h3>
+                <h3>SolarDrive Urban</h3>
+                <p class="modelo-subtitulo">Mobilidade Urbana Compacta</p>
                 <hr />
                 <ul>
-                  <li>Motor V8 de 5.0L</li>
-                  <li>Suspensão G-Trac</li>
-                  <li>Rodas de liga leve</li>
-                  <li>Design aerodinâmico</li>
+                  <li>Painéis solares integrados: 200W</li>
+                  <li>Autonomia: até 80km/carga</li>
+                  <li>Velocidade máxima: 45 km/h</li>
+                  <li>Peso: 18kg (ultraleve)</li>
+                  <li>Carregamento solar: 4-6h</li>
+                  <li>Pneus anti-furo de 10"</li>
                 </ul>
-                <a href="#" class="btn-saiba-mais">SAIBA MAIS</a>
+                <a href="#" class="btn-saiba-mais">SAIBA MAIS →</a>
               </div>
             </article>
 
-            <!-- Slide 2: SolarDrive X Sport -->
+            <!-- Slide 2: SolarDrive X Performance -->
             <article class="slide">
               <figure class="image-column">
                 <img
                   src="assets/img/sdx-sport.jpg"
-                  alt="SolarDrive X Sport - Modelo esportivo elétrico"
+                  alt="SolarDrive X Performance - Scooter de alta performance"
                 />
               </figure>
               <div class="info-column">
-                <h3>ESPECIFICAÇÕES</h3>
+                <h3>SolarDrive X Performance</h3>
+                <p class="modelo-subtitulo">Performance e Velocidade</p>
                 <hr />
                 <ul>
-                  <li>Motor Elétrico High-Torque</li>
-                  <li>Bateria de Longa Duração</li>
-                  <li>Interior Premium</li>
-                  <li>Modo Sport+</li>
+                  <li>Painéis solares premium: 350W</li>
+                  <li>Autonomia: até 150km/carga</li>
+                  <li>Velocidade máxima: 65 km/h</li>
+                  <li>Motor dual elétrico com torque</li>
+                  <li>Display digital com GPS integrado</li>
+                  <li>Bateria de fast-charging híbrida</li>
                 </ul>
-                <a href="#" class="btn-saiba-mais">SAIBA MAIS</a>
+                <a href="#" class="btn-saiba-mais">SAIBA MAIS →</a>
               </div>
             </article>
 
-            <!-- Slide 3: SolarDrive Premium -->
+            <!-- Slide 3: SolarDrive Luxe -->
             <article class="slide">
               <figure class="image-column">
                 <img
                   src="assets/img/carro.png"
-                  alt="SolarDrive Premium - Modelo premium com tração integral"
+                  alt="SolarDrive Luxe - Carro elétrico solar premium"
                 />
               </figure>
               <div class="info-column">
-                <h3>ESPECIFICAÇÕES</h3>
+                <h3>SolarDrive Luxe</h3>
+                <p class="modelo-subtitulo">Luxo Sustentável</p>
                 <hr />
                 <ul>
-                  <li>Tração Integral AWD</li>
-                  <li>Sistema de Som Surround</li>
-                  <li>Teto Solar Panorâmico</li>
-                  <li>Conectividade Total</li>
+                  <li>Painéis solares full-body: 800W</li>
+                  <li>Autonomia: até 400km/carga</li>
+                  <li>Velocidade máxima: 120 km/h</li>
+                  <li>Interior premium com climatização</li>
+                  <li>Conexão 5G e carregamento wireless</li>
+                  <li>Teto solar panorâmico panorâmico</li>
                 </ul>
-                <a href="#" class="btn-saiba-mais">SAIBA MAIS</a>
+                <a href="#" class="btn-saiba-mais">SAIBA MAIS →</a>
               </div>
             </article>
           </div>
 
+          <!-- Botões de seta: prev -->
+          <label
+            for="slide3"
+            class="carousel-btn carousel-btn--prev btn-from-slide1"
+            aria-label="Slide anterior"
+            >&#8249;</label
+          >
+          <label
+            for="slide1"
+            class="carousel-btn carousel-btn--prev btn-from-slide2"
+            aria-label="Slide anterior"
+            >&#8249;</label
+          >
+          <label
+            for="slide2"
+            class="carousel-btn carousel-btn--prev btn-from-slide3"
+            aria-label="Slide anterior"
+            >&#8249;</label
+          >
+
+          <!-- Botões de seta: next -->
+          <label
+            for="slide2"
+            class="carousel-btn carousel-btn--next btn-from-slide1"
+            aria-label="Próximo slide"
+            >&#8250;</label
+          >
+          <label
+            for="slide3"
+            class="carousel-btn carousel-btn--next btn-from-slide2"
+            aria-label="Próximo slide"
+            >&#8250;</label
+          >
+          <label
+            for="slide1"
+            class="carousel-btn carousel-btn--next btn-from-slide3"
+            aria-label="Próximo slide"
+            >&#8250;</label
+          >
+
           <!-- Navegação por pontos -->
           <div class="navigation">
-            <label for="slide1" class="bar"></label>
-            <label for="slide2" class="bar"></label>
-            <label for="slide3" class="bar"></label>
+            <label for="slide1" class="bar" title="Slide 1: Urban"></label>
+            <label
+              for="slide2"
+              class="bar"
+              title="Slide 2: X Performance"
+            ></label>
+            <label for="slide3" class="bar" title="Slide 3: Luxe"></label>
           </div>
         </div>
       </section>
@@ -241,9 +295,10 @@
       <!-- -------------------- SECTION NOSSO TIME ------------------- -->
       <section id="time" class="time" aria-labelledby="titulo-time">
         <div class="container">
-          <h2 id="titulo-time" class="secao-titulo">Nosso Time</h2>
+          <h2 id="titulo-time" class="secao-titulo">Sobre nós</h2>
           <p class="secao-subtitulo">
-            Pessoas apaixonadas por tecnologia limpa e mobilidade do futuro.
+            Impulsionamos o futuro da mobilidade com tecnologia limpa, inovação
+            e propósito.
           </p>
 
           <!-- Lista de membros da equipe -->
@@ -610,7 +665,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="assets/js/carrossel.js"></script>
   </body>
 </html>
