@@ -413,7 +413,7 @@ nav {
 /* ==================================================== */
 
 .time {
-  padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
+  padding: 5rem 2rem;
   background-color: var(--cinza-areia);
   position: relative;
   overflow: hidden;
@@ -435,12 +435,62 @@ nav {
 }
 .time-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(clamp(130px, 40vw, 180px), 1fr)
-  );
-  gap: clamp(1rem, 2vw, 1.5rem);
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.card-membro {
+  background-color: var(--branco);
+  border: 1.5px solid var(--cinza-suave);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition:
+    border-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
+  box-shadow: var(--sombra-card);
+}
+.card-membro:hover {
+  border-color: var(--azul-claro);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(74, 158, 202, 0.16);
+}
+.avatar-membro {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--verde-claro), var(--azul-claro));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--branco);
+  box-shadow: 0 4px 12px rgba(45, 125, 70, 0.18);
+}
+.card-membro h3 {
+  font-family: var(--fonte-ui);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--escuro);
+  margin-bottom: 0.25rem;
+}
+.cargo {
+  font-size: 0.82rem;
+  color: var(--verde-folha);
+  font-weight: 700;
+  font-family: var(--fonte-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.bio {
+  font-size: 0.85rem;
+  color: var(--cinza-texto);
+  margin-top: 0.75rem;
+  line-height: 1.6;
 }
 
 /* ==================================================== */
