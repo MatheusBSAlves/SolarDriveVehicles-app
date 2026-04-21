@@ -152,27 +152,32 @@ nav {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
+  width: 100%;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: clamp(0.4rem, 1vw, 0.6rem);
+  flex-shrink: 0;
 }
 
-.logo span.sol {
-  font-size: 1.8rem;
-  color: var(--amarelo-sol);
-  text-shadow: 0 2px 16px rgba(240, 192, 64, 0.25);
+.sol-img {
+  width: clamp(28px, 5vw, 38px);
+  height: clamp(28px, 5vw, 38px);
+  object-fit: contain;
+  display: inline;
+  vertical-align: middle;
 }
 
 .logo-texto {
   font-family: var(--fonte-titulo);
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 800;
   color: var(--escuro);
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 .logo-texto span {
@@ -182,10 +187,12 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1rem, 2vw, 2rem);
   font-family: var(--fonte-ui);
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
   font-weight: 600;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -193,6 +200,7 @@ nav {
   transition: color 0.2s ease;
   padding: 0.3rem 0;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -224,13 +232,14 @@ nav {
 /* ------------ sec hero(banner principal) ------------ */
 /* ==================================================== */
 .hero {
-  min-height: 92vh;
+  min-height: clamp(60vh, 92vh, 100vh);
   display: flex;
   align-items: center;
+  justify-content: center;
   background: url("../img/hero-carbg.jpg") no-repeat center/cover;
   position: relative;
   overflow: hidden;
-  padding: 6rem 2rem 4rem;
+  padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 3vw, 2rem) clamp(2rem, 4vw, 4rem);
 }
 
 .hero::before {
@@ -249,8 +258,8 @@ nav {
   position: absolute;
   bottom: -80px;
   left: -80px;
-  width: 380px;
-  height: 380px;
+  width: clamp(250px, 50vw, 380px);
+  height: clamp(250px, 50vw, 380px);
   background: radial-gradient(
     circle,
     rgba(74, 158, 202, 0.14) 0%,
@@ -262,19 +271,18 @@ nav {
 
 .hero-conteudo {
   max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-<<<<<<< Updated upstream
-  flex-direction: row;
-  align-items: center;
   width: 100%;
-=======
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: start;
->>>>>>> Stashed changes
+  justify-content: center;
   position: relative;
   z-index: 1;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.fundo-transparente {
+  max-width: 100%;
 }
 
 .hero-badge {
@@ -283,33 +291,24 @@ nav {
   border: 2px solid var(--border-verde-40);
   color: var(--verde-medio);
   font-family: var(--fonte-ui);
-  font-size: 0.78rem;
+  font-size: clamp(0.65rem, 1.5vw, 0.78rem);
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 0.4rem 1rem;
+  padding: clamp(0.3rem, 0.5vw, 0.4rem) clamp(0.7rem, 1.5vw, 1rem);
   border-radius: 50px;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 
 .hero-titulo {
   font-family: var(--fonte-titulo);
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 4.5vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1.5px;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
   color: var(--verde-medio);
-}
-
-.hero-texto {
-  grid-column: 1;
-  color: var(--verde-claro);
   text-shadow: 1px 1.5px 10px rgb(6, 59, 1);
-}
-
-.hero-titulo .destaque {
-  color: var(--verde-folha);
 }
 
 .hero-titulo .sol {
@@ -318,10 +317,10 @@ nav {
 }
 
 .hero-descricao {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   color: var(--creme);
   max-width: 540px;
-  margin-bottom: 2.5rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
   line-height: 1.5;
   text-shadow: 1.5px 1.5px 2px rgb(2, 22, 10);
   text-align: left;
@@ -331,7 +330,7 @@ nav {
 /* ==================================================== */
 .diferenciais {
   background-color: var(--cinza-areia);
-  padding: 5rem 2rem;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
   position: relative;
   overflow: hidden;
 }
@@ -354,15 +353,18 @@ nav {
 
 .diferenciais-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(150px, 50vw, 200px), 1fr)
+  );
+  gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 .card-diferencial {
   background-color: var(--branco);
   border: 1.5px solid var(--cinza-suave);
   border-radius: 20px;
-  padding: 2rem 1.5rem;
+  padding: clamp(1.2rem, 3vw, 2rem) clamp(1rem, 2.5vw, 1.5rem);
   text-align: center;
   transition:
     border-color 0.3s,
@@ -378,21 +380,21 @@ nav {
 }
 
 .icone-diferencial {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
   display: block;
 }
 
 .card-diferencial h3 {
   font-family: var(--fonte-ui);
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   font-weight: 800;
   color: var(--verde-folha);
   margin-bottom: 0.5rem;
 }
 
 .card-diferencial p {
-  font-size: 0.88rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.88rem);
   color: var(--cinza-texto);
   line-height: 1.6;
 }
@@ -402,7 +404,7 @@ nav {
 /* ==================================================== */
 
 .produtos {
-  padding: 5rem 2rem;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
   background-color: var(--branco);
 }
 
@@ -411,7 +413,7 @@ nav {
 /* ==================================================== */
 
 .time {
-  padding: 5rem 2rem;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
   background-color: var(--cinza-areia);
   position: relative;
   overflow: hidden;
@@ -433,9 +435,12 @@ nav {
 }
 .time-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2.5rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(130px, 40vw, 180px), 1fr)
+  );
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 /* ==================================================== */
@@ -443,62 +448,130 @@ nav {
 /* ==================================================== */
 
 .faq {
-  padding: 5rem 2rem;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
   background-color: var(--branco);
+}
+
+.faq-lista {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(280px, 100%, 350px), 1fr)
+  );
+  gap: clamp(1.5rem, 2vw, 2rem);
+  padding-left: clamp(0, 2vw, 3rem);
+  max-width: 1200px;
+}
+.faq-item {
+  background-color: var(--creme);
+  border: 1.5px solid var(--cinza-suave);
+  border-radius: 14px;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.faq-item:hover {
+  border-color: var(--verde-claro);
+  box-shadow: 0 2px 14px rgba(45, 125, 70, 0.09);
+}
+.faq-pergunta {
+  font-family: var(--fonte-ui);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 700;
+  color: var(--escuro);
+  padding: clamp(0.9rem, 2vw, 1.25rem) clamp(1rem, 2vw, 1.5rem);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.faq-pergunta::after {
+  content: "+";
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: var(--verde-folha);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.faq-resposta {
+  padding: clamp(0.5rem, 1vw, 0.6rem) clamp(1rem, 2vw, 1.5rem)
+    clamp(0.9rem, 2vw, 1.25rem);
+  color: var(--cinza-texto);
+  font-size: clamp(0.8rem, 1.5vw, 0.92rem);
+  line-height: 1.7;
+  border-top: 1px solid var(--cinza-suave);
+}
+.faq-resposta ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.faq-resposta ul li {
+  margin-bottom: 0.3rem;
+}
+.faq-resposta ul ul {
+  list-style: circle;
+  margin-top: 0.3rem;
 }
 
 /* ==================================================== */
 /* ----------------- sec-contato e form --------------- */
 /* ==================================================== */
 .contato {
-  padding-block: 6rem;
+  background:
+    radial-gradient(
+      ellipse 60% 60% at 90% 50%,
+      rgba(126, 201, 154, 0.2) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 50% at 5% 80%,
+      rgba(74, 158, 202, 0.15) 0%,
+      transparent 65%
+    ),
+    linear-gradient(150deg, var(--verde-fundo) 0%, var(--azul-fundo) 100%);
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
 }
-
-.contato-interior {
+.contato-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 5rem;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: start;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
 }
 
-.contato-texto p {
-  font-weight: 300;
-  color: var(--terra);
-  margin-bottom: 2rem;
-  line-height: 1.7;
+@media (min-width: 768px) {
+  .contato-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
-.contato-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  list-style: none;
+.contato-info h3 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  color: var(--escuro);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
 }
-
-.contato-info li {
+.contato-info p {
+  color: var(--cinza-texto);
+  line-height: 1.8;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+.contato-detalhe {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.95rem;
-  color: var(--terra);
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+  color: var(--cinza-texto);
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+  font-family: var(--fonte-ui);
 }
-
-.contato-icone {
-  font-size: 1.1rem;
-  flex-shrink: 0;
+.contato-detalhe span:first-child {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
-
-.form-contato {
-  background: var(--branco);
-  border: 1px solid var(--border-form);
-  border-radius: 20px;
-  padding: 2.5rem;
-  box-shadow: var(--sombra-card);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -522,7 +595,6 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 input[type="text"],
 input[type="email"],
 select,
@@ -539,7 +611,6 @@ textarea {
     background-color 0.2s;
   width: 100%;
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
@@ -548,22 +619,18 @@ textarea:focus {
   border-color: var(--verde-medio);
   background-color: var(--branco);
 }
-
 input::placeholder,
 textarea::placeholder {
   color: rgba(90, 114, 101, 0.5);
 }
-
 select {
   appearance: none;
   cursor: pointer;
 }
-
 textarea {
   resize: vertical;
   min-height: 120px;
 }
-
 .btn-enviar {
   background: linear-gradient(
     135deg,
@@ -573,8 +640,8 @@ textarea {
   color: var(--branco);
   font-family: var(--fonte-ui);
   font-weight: 700;
-  font-size: 1rem;
-  padding: 1rem 2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2rem);
   border-radius: 50px;
   border: none;
   cursor: pointer;
@@ -582,13 +649,21 @@ textarea {
     opacity 0.2s,
     transform 0.2s,
     box-shadow 0.2s;
-  margin-top: 0.5rem;
+  margin-top: clamp(0.25rem, 1vw, 0.5rem);
   box-shadow: 0 4px 16px rgba(45, 125, 70, 0.28);
+  width: 100%;
+  max-width: 300px;
 }
 .btn-enviar:hover {
   opacity: 0.92;
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(45, 125, 70, 0.38);
+}
+
+@media (min-width: 768px) {
+  .btn-enviar {
+    width: auto;
+  }
 }
 
 /* ==================================================== */
@@ -597,7 +672,8 @@ textarea {
 
 footer {
   background: linear-gradient(160deg, var(--escuro) 0%, #0f2318 100%);
-  padding: 3rem 2rem 1.5rem;
+  padding: clamp(2rem, 3vw, 3rem) clamp(1rem, 3vw, 2rem)
+    clamp(1rem, 2vw, 1.5rem);
   position: relative;
   overflow: hidden;
 }
@@ -619,11 +695,21 @@ footer::before {
 
 .footer-conteudo {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(200px, 50vw, 250px), 1fr)
+  );
+  gap: clamp(2rem, 3vw, 3rem);
+  padding-bottom: clamp(2rem, 3vw, 3rem);
   border-bottom: 1px solid var(--border-footer-10);
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.5rem, 2vw, 2rem);
+}
+
+/* ---logo --- */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 footer .logo-texto {
@@ -644,20 +730,20 @@ footer .logo-texto span {
 
 .footer-col h4 {
   font-family: var(--fonte-titulo);
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
   color: var(--creme);
-  margin-bottom: 0.6rem;
+  margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
 }
 
 .footer-col ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: clamp(0.3rem, 0.7vw, 0.5rem);
   color: var(--text-footer-75);
 }
 
 .footer-col a {
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
   font-weight: 300;
   transition: color var(--transicao);
 }
@@ -670,10 +756,11 @@ footer .logo-texto span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: clamp(0.65rem, 1vw, 0.8rem);
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
   color: var(--text-footer-75);
+  text-align: center;
 }
 
 .footer-bottom a {
@@ -761,75 +848,157 @@ footer .logo-texto span {
   }
 }
 
-/* -------------- carrosel -------------- */
+/* ==================================================== */
+/* ------------------- CARROSSEL --------------------- */
+/* ==================================================== */
 
+/* Inputs de controle dos slides (ocultos) */
 input[name="slider"] {
   display: none;
 }
 
+/* Container principal do carrossel */
 .carousel-container {
-  width: 60%;
+  width: 90%; /* Largura responsiva para dar espaço ao conteúdo */
+  max-width: 1100px;
   overflow: hidden;
   position: relative;
   margin: auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Container dos slides */
 .slides {
   display: flex;
-  width: 300%;
-  height: 100%;
-  transition: 0.6s ease;
+  width: 300%; /* 3 slides de 33.33% cada */
+  transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Transição suave */
 }
 
+/* Cada slide individual */
 .slide {
   width: 33.33%;
+  display: flex;
+  height: 600px; /* Aumentado para maior impacto visual */
 }
 
-.slide img {
+/* Coluna da Imagem */
+.image-column {
+  flex: 4; /* Ocupa 4/5 do espaço para ainda maior destaque */
+  position: relative;
+}
+
+.image-column img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Mantém proporção e cobre o container */
 }
 
-/* Lógica de Movimentação */
+/* Coluna de Informações */
+.info-column {
+  flex: 1; /* Ocupa 1/5 do espaço */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+
+.info-column h3 {
+  /* Título das especificações (ajustado para h3 na estrutura HTML) */
+  color: var(--verde-folha);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.info-column hr {
+  border: 0;
+  border-top: 2px var(--verde-medio);
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.info-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-column li {
+  margin-bottom: 15px;
+  font-family: sans-serif;
+  color: #444;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Tracinho vermelho antes de cada especificação */
+.info-column li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background: var(--verde-folha);
+  transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+/* Botão Saiba Mais */
+.btn-saiba-mais {
+  margin-top: auto; /* Empurra para o fundo da coluna */
+  text-align: center;
+  padding: 12px;
+  border: 2px solid var(--verde-medio);
+  color: var(--verde-medio);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-saiba-mais:hover {
+  background: var(--verde-claro);
+  color: #fff;
+}
+
+/* Lógica de Movimentação dos Slides */
 #slide1:checked ~ .slides {
-  margin-left: 0;
+  margin-left: 0; /* Mostra o primeiro slide */
 }
 
 #slide2:checked ~ .slides {
-  margin-left: -100%;
+  margin-left: -100%; /* Mostra o segundo slide */
 }
 
 #slide3:checked ~ .slides {
-  margin-left: -200%;
+  margin-left: -200%; /* Mostra o terceiro slide */
 }
 
-/* Estilização das Barras de Navegação */
+/* Navegação por pontos (sobreposta na imagem) */
 .navigation {
   position: absolute;
   bottom: 20px;
-  left: 50%;
+  left: 40%; /* Centraliza na coluna da imagem (40% para 4/5) */
   transform: translateX(-50%);
   display: flex;
 }
 
 .bar {
-  width: 50px;
-  height: 10px;
-  border: 2px solid #fff;
+  width: 40px;
+  height: 5px;
+  border: 1px solid #fff;
   margin: 6px;
   cursor: pointer;
   transition: 0.4s;
   border-radius: 5px;
+  background: transparent; /* Fundo transparente por padrão */
 }
 
-.bar:hover {
-  background: #fff;
-}
-
-/* Destacar a barra ativa */
+/* Destaque da barra ativa */
 #slide1:checked ~ .navigation label[for="slide1"],
 #slide2:checked ~ .navigation label[for="slide2"],
 #slide3:checked ~ .navigation label[for="slide3"] {
-  background: #fff;
+  background: #fff; /* Fundo branco para o slide ativo */
 }
