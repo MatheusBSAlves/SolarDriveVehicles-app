@@ -33,7 +33,12 @@
           class="logo"
           aria-label="SolarDrive Vehicles - Voltar ao inicio"
         >
-          <span class="sol">&#9728;</span>
+          <img
+            src="assets/img/logo-colorida.png"
+            alt=""
+            class="sol-img"
+            aria-hidden="true"
+          />
           <span class="logo-texto">Solar<span>Drive</span></span>
         </a>
 
@@ -52,7 +57,7 @@
       <!-- ----------------------- SECTION HERO ----------------------- -->
       <section id="inicio" class="hero" aria-label="Apresentação principal">
         <div class="hero-conteudo">
-          <div class="hero-texto fundo-transparente">
+          <div class="fundo-transparente">
             <span class="hero-badge">&#9889; Mobilidade 100% Solar</span>
 
             <h1 class="hero-titulo">
@@ -235,127 +240,313 @@
 
       <!-- -------------------- SECTION NOSSO TIME ------------------- -->
       <section id="time" class="time" aria-labelledby="titulo-time">
-        <div class="container"></div>
+        <div class="container">
+          <h2 id="titulo-time" class="secao-titulo">Nosso Time</h2>
+          <p class="secao-subtitulo">
+            Pessoas apaixonadas por tecnologia limpa e mobilidade do futuro.
+          </p>
+
+          <!-- Lista de membros da equipe -->
+          <ul class="time-grid" aria-label="Membros da equipe SolarDrive">
+            <li class="card-membro">
+              <img
+                class="avatar"
+                src="assets/img/chris.jpeg"
+                alt="Foto de Chris, CEO e Cofundador da SolarDrive"
+              />
+              <u><h3>Chris</h3></u>
+              <span class="cargo">CEO &amp; Cofundador</span>
+              <p class="bio">
+                Visionário por trás da missão de tornar a mobilidade elétrica
+                acessível a todos.
+              </p>
+            </li>
+
+            <li class="card-membro">
+              <img
+                class="avatar"
+                src="assets/img/Berno.png"
+                alt="Matheus Berno, CTO da SolarDrive"
+              />
+              <u><h3>Matheus Berno</h3></u>
+              <span class="cargo">CTO</span>
+              <p class="bio">
+                Lidera a arquitetura tecnológica que impulsiona nossa plataforma
+                de veículos elétricos.
+              </p>
+            </li>
+
+            <li class="card-membro">
+              <img
+                class="avatar"
+                src="assets/img/ErickCiribelli.png"
+                alt="Foto de Erick Ciribelli, Head de Operações da SolarDrive"
+              />
+              <u><h3>Erick Ciribelli</h3></u>
+              <span class="cargo">CMO</span>
+              <p class="bio">
+                Responsável pela estratégia de marketing e posicionamento da
+                marca no mercado de mobilidade elétrica.
+              </p>
+            </li>
+
+            <li class="card-membro">
+              <img
+                class="avatar"
+                src="assets/img/Cayke.png"
+                alt="Foto de Cayke, Head de Design da SolarDrive"
+              />
+              <u><h3>Cayke</h3></u>
+              <span class="cargo">Head de Design</span>
+              <p class="bio">
+                Transforma a experiência do usuário em algo intuitivo, bonito e
+                sustentável.
+              </p>
+            </li>
+
+            <li class="card-membro">
+              <img
+                class="avatar"
+                src="assets/img/Guilherme.jpeg"
+                alt="Foto de Guilherme, Head de Operações da SolarDrive"
+              />
+              <u><h3>Guilherme</h3></u>
+              <span class="cargo">Head de Operações</span>
+              <p class="bio">
+                Garante que cada entrega chegue no prazo certo, com o menor
+                impacto ambiental possível.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <!-- ----------------------- SECTION FAQ ----------------------- -->
+      <!-- -------------------- SECTION FAQ ------------------- -->
       <section id="faq" class="faq" aria-labelledby="titulo-faq">
         <div class="container">
-          <h2>Sobre a Empresa</h2>
-          <p>
-            Fundada com o objetivo de revolucionar o mercado automotivo, a
-            SolarDrive Vehicles combina inovação e tecnologia.
+          <h2 id="titulo-faq" class="secao-titulo">Perguntas Frequentes</h2>
+          <p class="secao-subtitulo">
+            Tire suas principais dúvidas sobre nossos veículos e serviços.
           </p>
 
-          <h3>Missão</h3>
-          <p>
-            Criar veículos eficientes e acessíveis para um futuro sustentável.
-          </p>
+          <!-- Lista de perguntas e respostas aninhadas -->
+          <ul class="faq-lista" aria-label="Perguntas frequentes">
+            <li class="faq-item">
+              <div class="faq-pergunta" role="heading" aria-level="3">
+                Como funciona o carregamento solar?
+              </div>
+              <div class="faq-resposta">
+                <p>
+                  Nossos veículos possuem painéis fotovoltaicos integrados à
+                  lataria e ao teto. O carregamento ocorre automaticamente:
+                </p>
+                <ul>
+                  <li>Durante o uso ao ar livre, mesmo em dias nublados</li>
+                  <li>Estacionado em área exposta ao sol</li>
+                  <li>
+                    Opcionalmente via tomada padrão (120V/220V) para
+                    carregamento rápido:
+                    <ul>
+                      <li>Carga completa em 4–6 horas na tomada</li>
+                      <li>
+                        Carga parcial (80%) em 2 horas com carregador rápido
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-          <h3>Visão</h3>
-          <p>Ser referência mundial em mobilidade elétrica.</p>
+            <li class="faq-item">
+              <div class="faq-pergunta" role="heading" aria-level="3">
+                Preciso de habilitação para os scooters?
+              </div>
+              <div class="faq-resposta">
+                <p>Depende do modelo:</p>
+                <ul>
+                  <li>
+                    <strong>SolarGlide S1</strong> (até 50cc equivalente): CNH
+                    categoria A ou ACC
+                  </li>
+                  <li>
+                    <strong>SolarGlide Pro</strong> (acima de 50cc): CNH
+                    categoria A obrigatória
+                  </li>
+                  <li>
+                    Os modelos compactos (SolarCity) exigem CNH categoria B
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-          <h3>Valores</h3>
-          <ul>
-            <li>Inovação | Sustentabilidade | Qualidade | Tecnologia</li>
+            <li class="faq-item">
+              <div class="faq-pergunta" role="heading" aria-level="3">
+                Qual a garantia dos veículos SolarDrive?
+              </div>
+              <div class="faq-resposta">
+                <p>Todos os nossos veículos têm garantia completa:</p>
+                <ul>
+                  <li>Motor e sistema elétrico: 5 anos ou 80.000 km</li>
+                  <li>
+                    Bateria: 8 anos (com manutenção de até 70% da capacidade)
+                    <ul>
+                      <li>
+                        Troca gratuita se a capacidade cair abaixo de 70% no
+                        período
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Painéis solares: 10 anos de garantia de desempenho</li>
+                  <li>
+                    Estrutura e lataria: 3 anos contra defeitos de fabricação
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <div class="faq-pergunta" role="heading" aria-level="3">
+                Como faço para comprar ou fazer uma cotação?
+              </div>
+              <div class="faq-resposta">
+                <p>É simples! Você pode:</p>
+                <ul>
+                  <li>Preencher o formulário de contato nesta página</li>
+                  <li>Ligar para nossa central: (35) 3000-9999</li>
+                  <li>
+                    Visitar um de nossos showrooms em:
+                    <ul>
+                      <li>São Paulo — Av. Paulista, 1234</li>
+                      <li>Belo Horizonte — Av. do Contorno, 567</li>
+                      <li>Rio de Janeiro — Rua da Assembleia, 89</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="faq-item">
+              <div class="faq-pergunta" role="heading" aria-level="3">
+                Os veículos têm financiamento?
+              </div>
+              <div class="faq-resposta">
+                <p>Sim! Trabalhamos com diversas opções:</p>
+                <ul>
+                  <li>
+                    Financiamento em até 60x com taxa reduzida verde (incentivo
+                    ambiental)
+                  </li>
+                  <li>Parceria com bancos: Itaú, Bradesco e Banco do Brasil</li>
+                  <li>Leasing para pessoas jurídicas com dedução fiscal</li>
+                </ul>
+              </div>
+            </li>
           </ul>
-          <br />
         </div>
       </section>
 
       <!-- --------------------- SECTION CONTATO --------------------- -->
-      <section class="contato" id="contato" aria-labelledby="titulo-contato">
-        <div class="container contato-interior">
-          <div class="contato-texto">
-            <span class="badge">Fale conosco</span>
-            <div class="linha-verde" aria-hidden="true"></div>
+      <section id="contato" class="contato" aria-labelledby="titulo-contato">
+        <div class="container">
+          <h2 id="titulo-contato" class="secao-titulo">Fale Conosco</h2>
+          <p class="secao-subtitulo">
+            Pronto para fazer parte da revolução solar? Entre em contato e nossa
+            equipe te atende.
+          </p>
 
-            <h2 class="secao-titulo" id="titulo-contato">
-              Pronto para dirigir <br />
-              com energia do sol?
-            </h2>
+          <div class="contato-grid">
+            <!-- Informações de contato -->
+            <address class="contato-info">
+              <h3>Vamos conversar!</h3>
+              <p>
+                Nossa equipe está pronta para responder suas dúvidas, fazer uma
+                cotação personalizada ou agendar um test drive em um de nossos
+                showrooms.
+              </p>
 
-            <p>
-              Entre em contato com nossos especialistas ou agende um test drive.
-            </p>
+              <p class="contato-detalhe">
+                <span>&#128205;</span>
+                <span>Av. do Sol, 999 — São Paulo, SP</span>
+              </p>
+              <p class="contato-detalhe">
+                <span>&#128222;</span>
+                <span>(35) 3000-9999</span>
+              </p>
+              <p class="contato-detalhe">
+                <span>&#128140;</span>
+                <span>contato@solardrive.com.br</span>
+              </p>
+              <p class="contato-detalhe">
+                <span>&#128336;</span>
+                <span>Seg–Sex: 8h às 18h | Sáb: 9h às 13h</span>
+              </p>
+            </address>
 
-            <ul class="contato-info" aria-label="Informações de contato">
-              <li>
-                <span class="contato-icone" aria-hidden="true">📧</span>
-                contato@solardrive.com.br
-              </li>
-              <li>
-                <span class="contato-icone" aria-hidden="true">📞</span> 0800
-                4402-8922
-              </li>
-              <li>
-                <span class="contato-icone" aria-hidden="true">📍</span> Muriaé,
-                MG
-              </li>
-            </ul>
+            <!-- Formulário de contato -->
+            <form
+              action="#"
+              method="post"
+              aria-label="Formulário de contato SolarDrive"
+              novalidate
+            >
+              <!-- Nome -->
+              <div class="campo-grupo">
+                <label for="nome">Nome completo</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <!-- E-mail -->
+              <div class="campo-grupo">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <!-- Assunto -->
+              <div class="campo-grupo">
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto" required>
+                  <option value="" disabled selected>
+                    Selecione um assunto
+                  </option>
+                  <option value="cotacao">Quero fazer uma cotação</option>
+                  <option value="test-drive">Agendar test drive</option>
+                  <option value="suporte">Suporte técnico</option>
+                  <option value="parceria">Proposta de parceria</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <!-- Mensagem -->
+              <div class="campo-grupo">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Escreva sua mensagem aqui..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Botão de envio -->
+              <button type="submit" class="btn-enviar">
+                Enviar Mensagem &#8594;
+              </button>
+            </form>
           </div>
-
-          <form
-            action="#"
-            method="post"
-            aria-label="Formulário de contato SolarDrive"
-            novalidate
-          >
-            <!-- Nome -->
-            <div class="campo-grupo">
-              <label for="nome">Nome completo</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Seu nome"
-                autocomplete="name"
-                required
-              />
-            </div>
-
-            <!-- E-mail -->
-            <div class="campo-grupo">
-              <label for="email">E-mail</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="seu@email.com"
-                autocomplete="email"
-                required
-              />
-            </div>
-
-            <!-- Assunto -->
-            <div class="campo-grupo">
-              <label for="assunto">Assunto</label>
-              <select id="assunto" name="assunto" required>
-                <option value="" disabled selected>Selecione um assunto</option>
-                <option value="cotacao">Quero fazer uma cotação</option>
-                <option value="test-drive">Agendar test drive</option>
-                <option value="suporte">Suporte técnico</option>
-                <option value="parceria">Proposta de parceria</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-
-            <!-- Mensagem -->
-            <div class="campo-grupo">
-              <label for="mensagem">Mensagem</label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                placeholder="Escreva sua mensagem aqui..."
-                required
-              ></textarea>
-            </div>
-
-            <!-- Botão de envio -->
-            <button type="submit" class="btn-enviar">
-              Enviar Mensagem &#8594;
-            </button>
-          </form>
         </div>
       </section>
     </main>
@@ -364,15 +555,24 @@
     <footer>
       <div class="container">
         <div class="footer-conteudo">
-          <div>
-            ☀️
-            <span class="logo-texto">Solar<span>Drive</span></span>
+          <!-- --- marca --- -->
+          <div class="footer-logo">
+            <a href="#inicio" class="logo">
+              <img
+                src="assets/img/logo-colorida.png"
+                alt=""
+                class="sol-img"
+                aria-hidden="true"
+              />
+              <span class="logo-texto">Solar<span>Drive</span></span>
+            </a>
             <p class="footer-descricao">
               Fabricante brasileira de veículos movidos exclusivamente a energia
               solar.
             </p>
           </div>
 
+          <!-- --- empresa --- -->
           <div class="footer-col">
             <h4>Empresa</h4>
             <ul>
@@ -382,6 +582,7 @@
             </ul>
           </div>
 
+          <!-- --- produtos --- -->
           <div class="footer-col">
             <h4>Produtos</h4>
             <ul>
@@ -391,6 +592,7 @@
             </ul>
           </div>
 
+          <!-- --- suporte --- -->
           <div class="footer-col">
             <h4>Suporte</h4>
             <ul>
@@ -402,7 +604,7 @@
 
         <div class="footer-bottom">
           <small
-            >© 2025 SolarDrive Vehicles. Todos os direitos reservados.</small
+            >© 2026 SolarDrive Vehicles. Todos os direitos reservados.</small
           >
           <small>Feito com ☀️ e <a href="#inicio">energia renovável</a></small>
         </div>
