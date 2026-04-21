@@ -1130,7 +1130,7 @@ textarea {
 /* ==================================================== */
 
 footer {
-  background: linear-gradient(160deg, var(--escuro) 0%, #0f2318 100%);
+  background: linear-gradient(160deg, #3b939ec7 0%, #d4db70d7 100%);
   padding: clamp(2rem, 3vw, 3rem) clamp(1rem, 3vw, 2rem)
     clamp(1rem, 2vw, 1.5rem);
   position: relative;
@@ -1143,13 +1143,7 @@ footer::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--verde-claro),
-    var(--azul-claro),
-    var(--amarelo-claro)
-  );
+  height: 3px;;
 }
 
 .footer-conteudo {
@@ -1176,7 +1170,7 @@ footer .logo-texto {
 }
 
 footer .logo-texto span {
-  color: var(--verde-claro);
+  color: var(--verde-folha);
 }
 
 .footer-descricao {
