@@ -824,7 +824,6 @@ input[name="slider"] {
     transform 0.3s,
     box-shadow 0.3s;
   position: relative;
-  overflow: hidden;
 }
 
 .card-membro::before {
