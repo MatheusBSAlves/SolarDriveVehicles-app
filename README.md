@@ -1,12 +1,12 @@
 # SolarDrive Vehicles
 
-Landing page estática criada para a empresa fictícia **SolarDrive Vehicles**, fabricante brasileira de veículos movidos por energia solar. A proposta do site é apresentar uma linha de **carros compactos, sedan, SUV e scooter solar**, destacando mobilidade urbana, sustentabilidade, economia e tecnologia conectada.
+Landing page estática criada para a empresa fictícia **SolarDrive Vehicles**, fabricante brasileira de veículos movidos por energia solar. A proposta do site é apresentar uma linha com **scooter, sedan e SUV solar**, destacando mobilidade urbana, sustentabilidade, economia e tecnologia conectada.
 
 ## Sobre o projeto
 
 Este projeto foi desenvolvido como trabalho acadêmico de Landing Page. A página simula um site institucional de uma marca de veículos solares, com foco em atrair possíveis clientes, apresentar os produtos principais e facilitar o contato comercial.
 
-A empresa escolhida foi a **SolarDrive Vehicles**, descrita no enunciado como uma fabricante de carros compactos e scooters movidos exclusivamente a energia solar, projetados para ambientes urbanos e voltados a uma alternativa limpa, acessível e estilosa para o deslocamento cotidiano.
+A empresa escolhida foi a **SolarDrive Vehicles**, descrita no enunciado como uma fabricante de veículos solares para uso urbano. Neste site, a linha foi representada por três modelos principais: Scooter One, Sedan S e SUV Terra.
 
 ## Objetivo da Landing Page
 
@@ -35,14 +35,14 @@ O site apresenta:
 - **FAQ/Perguntas Frequentes** com perguntas e respostas usando listas aninhadas;
 - **formulário de contato** com nome, e-mail, assunto e mensagem;
 - **rodapé institucional** com links de navegação;
-- **links com ícones para redes sociais** abrindo em nova aba.
+- **menu de redes sociais** no cabeçalho, com ícones locais e links abrindo em nova aba.
 
 ## Tecnologias usadas
 
 - **HTML5** para estrutura e semântica da página;
 - **CSS3** para layout, responsividade, animações simples e estilização;
 - **Google Fonts** para tipografia externa;
-- **SVG inline** para os ícones das redes sociais;
+- **arquivos SVG locais** para os ícones das redes sociais, salvos em `assets/img`;
 - **imagens locais** armazenadas em `assets/img`;
 - **mailto** no formulário de contato para simular o envio de mensagem por e-mail.
 
@@ -98,7 +98,7 @@ Como o projeto é estático e não possui backend, o envio usa `mailto:contato@s
 Foram aplicados cuidados básicos de acessibilidade:
 
 - imagens relevantes possuem `alt` descritivo;
-- ícones decorativos usam `aria-hidden="true"` quando não precisam ser lidos por leitores de tela;
+- ícones decorativos, como os do menu de redes sociais, usam `alt=""` e `aria-hidden="true"` para evitar leitura repetida por leitores de tela;
 - o menu principal possui `aria-label`;
 - botões, links e campos de formulário possuem estados de foco visíveis;
 - o formulário usa `label` associado a cada campo;
@@ -128,7 +128,15 @@ Também é possível abrir o projeto com a extensão **Live Server** do VS Code.
 - Os valores, autonomias, endereços e dados comerciais são fictícios, usados apenas para simular uma landing page institucional.
 - O carrossel e o FAQ funcionam sem JavaScript.
 
-## Autores
+## Equipe fictícia apresentada no site
+
+- Chris: CEO & Cofundador
+- Matheus Berno: CTO
+- Erick Ciribelli: CMO
+- Cayke: Head de Design
+- Guilherme: Head de Operações
+
+## Autores do trabalho
 
 - Júlia Santos 
 - Matheus Berno
