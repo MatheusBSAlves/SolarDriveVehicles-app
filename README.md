@@ -48,31 +48,6 @@ O site apresenta:
 
 O projeto **não usa JavaScript**, backend ou banco de dados.
 
-## Estrutura de arquivos
-
-```text
-SolarDriveVehicles-app/
-|-- index.html
-|-- README.md
-|-- assets/
-|   |-- css/
-|   |   |-- index.css
-|   |   `-- variaveis.css
-|   `-- img/
-|       |-- logo-colorida.png
-|       |-- scooter.png
-|       |-- sedan.png
-|       |-- suv.png
-|       |-- herobg-1.3right.png
-|       |-- chris.jpeg
-|       |-- Berno.png
-|       |-- ErickCiribelli.png
-|       |-- Cayke.png
-|       `-- Guilherme.jpeg
-`-- .vscode/
-    `-- settings.json
-```
-
 ## Principais decisões de desenvolvimento
 
 ### HTML semântico
@@ -129,31 +104,6 @@ Foram aplicados cuidados básicos de acessibilidade:
 - o formulário usa `label` associado a cada campo;
 - links externos de redes sociais usam `target="_blank"` e `rel="noopener noreferrer"`.
 
-## Checklist de atendimento aos requisitos do trabalho
-
-| Requisito do enunciado | Como o projeto atende |
-|---|---|
-| Criar uma Landing Page para uma empresa fictícia | A página foi criada para a SolarDrive Vehicles. |
-| Apresentar empresa/produtos de forma atrativa | O site possui banner, produtos, diferenciais, missão, FAQ e contato. |
-| Utilizar semântica do HTML5 | Foram usadas tags como `header`, `nav`, `main`, `section`, `article`, `figure`, `table`, `address` e `footer`. |
-| Usar pelo menos 5 tags semânticas diferentes | O projeto usa mais de 5 tags semânticas apropriadas. |
-| Links com ícones para Twitter/X, Facebook e Instagram | O menu “Redes sociais” contém os três ícones em SVG. |
-| Redes sociais abrirem em nova aba | Os links usam `target="_blank"`. |
-| CSS separado | O estilo está nos arquivos `assets/css/index.css` e `assets/css/variaveis.css`. |
-| CSS com comentários | O arquivo `index.css` possui comentários separando as partes principais do layout. |
-| Paleta com pelo menos 3 cores | A paleta usa verdes, amarelos, azuis e tons neutros. |
-| Pelo menos 2 seções diferentes | O site possui várias seções: produtos, diferenciais, missão, time, FAQ e contato. |
-| Tabela de produtos/serviços | A seção de produtos possui uma tabela comparativa com modelos, preços, autonomia, uso ideal e descrição. |
-| Formulário de contato | A seção de contato possui formulário com nome, e-mail, assunto e mensagem. |
-| Lista do time | A seção “Sobre nós” possui lista de membros e cargos. |
-| FAQ com perguntas e respostas | O FAQ possui perguntas, respostas e listas aninhadas. |
-| Navegabilidade | Menu, botões, links internos, carrossel, FAQ e links de rodapé são clicáveis. |
-| Legibilidade e tipografia | O projeto usa duas famílias de fonte e vários tamanhos de texto. |
-| Imagens relevantes | Há imagens do banner, logo, veículos e equipe. |
-| Pelo menos 3 imagens com `alt` apropriado | O site possui mais de 3 imagens relevantes com `alt` descritivo. |
-| Código limpo e organizado | O código está indentado, dividido em seções e com nomes de classes claros. |
-| Documentação | Este README explica o desenvolvimento, tecnologias, autores e como testar. |
-
 ## Como testar o site
 
 1. Baixe ou mantenha todos os arquivos na mesma pasta do projeto.
@@ -178,34 +128,10 @@ Também é possível abrir o projeto com a extensão **Live Server** do VS Code.
 - Os valores, autonomias, endereços e dados comerciais são fictícios, usados apenas para simular uma landing page institucional.
 - O carrossel e o FAQ funcionam sem JavaScript.
 
-## Pontos fortes do projeto
-
-- A escolha da empresa está alinhada ao enunciado da SolarDrive Vehicles.
-- O site apresenta mais conteúdo do que o mínimo exigido.
-- A página tem boa separação visual entre seções.
-- O projeto usa HTML semântico em várias partes.
-- A tabela, o formulário, a lista de equipe e o FAQ cobrem bem as seções sugeridas no trabalho.
-- As redes sociais possuem ícones e abrem em nova aba.
-- O código CSS está separado e organizado por blocos.
-- A ausência de JavaScript simplifica a entrega e mostra domínio de HTML e CSS.
-
-## Melhorias opcionais para uma versão futura
-
-Estas melhorias não são obrigatórias para atender ao enunciado, mas poderiam deixar o projeto ainda mais completo:
-
-- adicionar uma seção “Onde estamos” com endereço e mapa ilustrativo;
-- adicionar uma seção “Trabalhe conosco” ou “Cases de sucesso”;
-- incluir um aviso visual após envio do formulário, caso o projeto passe a usar JavaScript;
-- trocar o `mailto` por integração real com backend em uma versão futura;
-- adicionar `aria-expanded` ao botão de redes sociais se o menu passar a ser controlado por JavaScript;
-- revisar a regra de `prefers-reduced-motion` para usar `scroll-behavior: auto` caso seja exigido um cuidado maior com acessibilidade de movimento;
-- remover variáveis CSS que não estejam sendo usadas, caso o professor avalie limpeza extrema do código;
-- adicionar uma legenda ou texto curto explicando que os preços e autonomias são fictícios.
-
 ## Autores
 
-- Chris
+- Júlia Santos 
 - Matheus Berno
 - Erick Ciribelli
-- Cayke
-- Guilherme
+- Cayke 
+- Guilherme Ferreira
