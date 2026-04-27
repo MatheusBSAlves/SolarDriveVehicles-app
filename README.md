@@ -104,7 +104,7 @@ A paleta foi reconstruída para combinar:
 
 Essa paleta foi aplicada em botões, cards, tabela, FAQ, formulário, cabeçalho, rodapé e elementos de destaque, garantindo pelo menos três cores bem distribuídas pela página.
 
-### Carrossel sem JavaScript
+### Carrossel
 
 O carrossel funciona somente com HTML e CSS.
 
@@ -166,7 +166,7 @@ Também é possível abrir o projeto com **Live Server** no VS Code.
 - O `mailto` depende de um aplicativo de e-mail configurado no dispositivo.
 - O conteúdo comercial, preços, autonomias, endereços e demais dados são fictícios.
 - O carrossel, o dropdown de redes, o FAQ e o destaque da tabela funcionam **sem JavaScript**.
-- A responsividade foi mantida com foco em desktop, tablet e celular.
+- A responsividade foi feita com foco em desktop, tablet e celular.
 
 ## Equipe fictícia apresentada no site
 
