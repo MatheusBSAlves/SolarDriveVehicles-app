@@ -1,22 +1,68 @@
 :root {
-  /* Cores principais */
-  --verde-folha: #2d7d46;
-  --verde-medio: #3ea05a;
-  --verde-claro: #7ec99a;
-  --verde-fundo: #eef7f1;
+  /* Paleta da marca */
+  --cor-energia: #2b757a;
+  --cor-energia-escura: #0e4547;
+  --cor-solar: #f3b63f;
+  --cor-solar-suave: #f8df9f;
+  --cor-tecnologia: #1f5d7a;
 
-  /* Cores de apoio */
-  --azul-fundo: #eaf5fb;
-  --amarelo-sol: #f0c040;
-  --amarelo-claro: #faeab0;
+  /* Neutros e superfícies */
+  --cor-fundo: #f6f6f0;
+  --cor-superficie: #ffffff;
+  --cor-superficie-campo: #f8faf7;
+  --cor-borda: #d8e0db;
+  --cor-borda-destaque: rgba(243, 182, 63, 0.28);
+  --cor-texto: #14343d;
+  --cor-texto-suave: #607178;
+  --cor-grafite: #0d1f29;
 
-  /* Neutros */
-  --branco: #ffffff;
-  --creme: #f7faf8;
-  --cinza-areia: #f0f4f2;
-  --cinza-suave: #dde8e2;
-  --cinza-texto: #5a7265;
-  --escuro: #1d3829;
+  /* Efeitos */
+  --cor-foco: #f3b63f;
+  --gradiente-fundo: linear-gradient(
+    180deg,
+    #f7f6ee 0%,
+    #edf6f0 36%,
+    #edf4f5 70%,
+    #f8f6ef 100%
+  );
+  --gradiente-hero: linear-gradient(
+    1100deg,
+    rgba(8, 22, 28, 0.623) 0%,
+    rgba(14, 43, 45, 0.623) 42%,
+    rgba(20, 79, 60, 0.623) 68%,
+    rgba(243, 183, 63, 0.323) 100%
+  );
+  --gradiente-rodape: linear-gradient(
+    160deg,
+    #102731 0%,
+    #173e47 42%,
+    #1d6a52 100%
+  );
+  --gradiente-superficie: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    #f7faf8 100%
+  );
+  --gradiente-painel: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    #f2f6f2 100%
+  );
+  --gradiente-acento-suave: linear-gradient(
+    135deg,
+    rgba(243, 182, 63, 0.12),
+    rgba(31, 93, 122, 0.08)
+  );
+  --gradiente-aviso: linear-gradient(
+    135deg,
+    rgba(243, 182, 63, 0.14),
+    rgba(43, 122, 92, 0.1)
+  );
+  --fundo-vidro: rgba(255, 255, 255, 0.72);
+  --fundo-vidro-forte: rgba(255, 255, 255, 0.9);
+  --sombra-suave: 0 12px 32px rgba(15, 34, 44, 0.08);
+  --sombra-media: 0 18px 40px rgba(15, 34, 44, 0.12);
+  --sombra-destaque: 0 14px 32px rgba(243, 182, 63, 0.28);
 
   /* Controle do ponto de parada dos links internos com header fixo */
   --anchor-offset: clamp(5.25rem, 9vh, 6.25rem);
