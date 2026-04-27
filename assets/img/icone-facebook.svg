@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="Facebook">
   <path
-    fill="#ffffff"
+    fill="#f3b63f"
+    transform="matrix(0.833333 0 0 0.833333 -2.541664 -1.166666)"
     d="M14.4 8.2V6.7c0-.7.2-1.1 1.2-1.1h1.6V2.8c-.8-.1-1.6-.2-2.4-.2-2.4 0-4 1.5-4 4.1v1.5H8.1v3.2h2.7v8h3.3v-8h2.7l.4-3.2h-3Z"
   />
 </svg>

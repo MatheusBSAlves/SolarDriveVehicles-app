@@ -59,7 +59,7 @@
                   <img
                     class="icone-rede"
                     src="assets/img/icone-x.svg"
-                    alt=""
+                    alt="x"
                     aria-hidden="true"
                   />
                 </a>
@@ -74,7 +74,7 @@
                   <img
                     class="icone-rede"
                     src="assets/img/icone-facebook.svg"
-                    alt=""
+                    alt="facebook"
                     aria-hidden="true"
                   />
                 </a>
@@ -89,7 +89,7 @@
                   <img
                     class="icone-rede"
                     src="assets/img/icone-instagram.svg"
-                    alt=""
+                    alt="instagram"
                     aria-hidden="true"
                   />
                 </a>
@@ -133,10 +133,26 @@
         </header>
 
         <section class="carrossel" aria-label="Carrossel de produtos">
-          <!-- Inputs invisíveis mantêm o carrossel funcional sem scripts. -->
-          <input type="radio" name="slider" id="slide1" checked />
-          <input type="radio" name="slider" id="slide2" />
-          <input type="radio" name="slider" id="slide3" />
+          <!-- Radios visiveis mantem o carrossel acessivel sem scripts. -->
+          <input
+            type="radio"
+            name="slider"
+            id="slide1"
+            aria-label="Selecionar SolarDrive Scooter One"
+            checked
+          />
+          <input
+            type="radio"
+            name="slider"
+            id="slide2"
+            aria-label="Selecionar SolarDrive Sedan S"
+          />
+          <input
+            type="radio"
+            name="slider"
+            id="slide3"
+            aria-label="Selecionar SolarDrive SUV Terra"
+          />
 
           <div class="lista-slides">
             <article class="slide-produto">
@@ -255,11 +271,6 @@
             &#8250;
           </label>
 
-          <nav class="bolinhas" aria-label="Selecionar modelo">
-            <label for="slide1" title="Scooter One"></label>
-            <label for="slide2" title="Sedan S"></label>
-            <label for="slide3" title="SUV Terra"></label>
-          </nav>
         </section>
 
         <section
@@ -764,7 +775,7 @@
         <article class="marca-rodape">
           <a href="#inicio" class="logo">
             <img
-              src="assets/img/logo-colorida.png"
+              src="assets/img/logo-coloridaFOOTER.png"
               alt=""
               class="imagem-logo"
               aria-hidden="true"
@@ -813,11 +824,7 @@
                 rel="noopener noreferrer"
                 aria-label="Abrir X/Twitter"
               >
-                <img
-                  src="assets/img/icone-x.svg"
-                  alt=""
-                  aria-hidden="true"
-                />
+                <img src="assets/img/icone-x.svg" alt="" aria-hidden="true" />
               </a>
             </li>
             <li>
